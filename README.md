@@ -193,3 +193,9 @@ head(DSraw)
     ## 4   NA   NA   NA   NA   NA
     ## 5   NA   NA   NA   NA   NA
     ## 6   NA   NA   NA   NA   NA
+
+## About the project
+
+Project under [Statistical Consulting
+Service](https://scs-fas-sjp.netlify.app/), University of Sri
+Jayewardenepura, Sri Lanka.

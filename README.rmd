@@ -24,3 +24,8 @@ library(DSjobtracker)
 
 head(DSraw)
 ```
+
+## About the project
+
+Project under [Statistical Consulting Service](https://scs-fas-sjp.netlify.app/), University of Sri Jayewardenepura, Sri Lanka.
+
