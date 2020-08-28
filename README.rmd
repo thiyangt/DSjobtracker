@@ -1,0 +1,26 @@
+---
+output: github_document
+---
+
+# DSjobtracker
+
+What skills and qualifications are required for data science related jobs?
+
+# Installation
+
+```r
+#install.packages("devtools")
+devtools::install_github("thiyangt/DSjobtracker")
+library(DSjobtracker)
+```
+
+```{r, echo=FALSE}
+library(DSjobtracker)
+```
+
+# Preview of the untidy dataset
+
+```{r}
+
+head(DSraw)
+```
