@@ -199,3 +199,7 @@ head(DSraw)
 Project under [Statistical Consulting
 Service](https://scs-fas-sjp.netlify.app/), University of Sri
 Jayewardenepura, Sri Lanka.
+
+Data collection and Entry: BSc (Hons) Statistics, 2020 Undergraduates
+
+Data wrangling: BSc (Hons) Statistics, 2020 Undergraduates
