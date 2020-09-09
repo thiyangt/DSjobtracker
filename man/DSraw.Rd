@@ -4,7 +4,9 @@
 \name{DSraw}
 \alias{DSraw}
 \title{Data Scientists/Data Analyst/ Statistician Job Tracker}
-\format{}
+\format{
+
+}
 \source{
 Collected and entered by BSc (Hons) Statistics undegraduates - 2020
 }
@@ -16,7 +18,7 @@ Job advertisements
 }
 \examples{
 data(DSraw)
-head(Dsraw)
+head(DSraw)
 summary(DSraw)
 }
 \keyword{datasets}

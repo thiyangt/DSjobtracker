@@ -8,6 +8,6 @@
 #'
 #' @examples
 #' data(DSraw)
-#' head(Dsraw)
+#' head(DSraw)
 #' summary(DSraw)
 "DSraw"

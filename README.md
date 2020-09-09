@@ -1,5 +1,5 @@
 
-# DSjobtracker
+# DSjobtracker <img src="hexsticker/figures/hexsticker.png" align="right" height="200"/>
 
 What skills and qualifications are required for data science related
 jobs?
@@ -200,6 +200,15 @@ Project under [Statistical Consulting
 Service](https://scs-fas-sjp.netlify.app/), University of Sri
 Jayewardenepura, Sri Lanka.
 
+### Our team and Contribution
+
 Data collection and Entry: BSc (Hons) Statistics, 2020 Undergraduates
 
-Data wrangling: BSc (Hons) Statistics, 2020 Undergraduates
+Hex sticker image design: 
+
+Column key documentation: 
+
+Data wrangling: 
+
+Data wrangling documentation: 
+
