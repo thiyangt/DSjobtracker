@@ -1,5 +1,5 @@
 
-# DSjobtracker <img src="hexsticker/figures/hexsticker.png" align="right" height="200"/>
+# DSjobtracker
 
 What skills and qualifications are required for data science related
 jobs?
@@ -14,9 +14,178 @@ library(DSjobtracker)
 
 # Preview of the tidy dataset
 
-```r
+``` r
 head(DStidy)
 ```
+
+    ##     ID Consultant DateRetrieved DatePublished
+    ## 1    1   Thiyanga    05/08/2020          <NA>
+    ## 320  2     Jayani    07/08/2020    31/07/2020
+    ## 321  3     Jayani    07/08/2020      06/08/20
+    ## 322  4     Jayani    07/08/2020    24/07/2020
+    ## 95   5     Jayani    07/08/2020    24/07/2020
+    ## 244  6     Jayani    07/08/2020    13/08/2020
+    ##                                       Job_title
+    ## 1                                          <NA>
+    ## 320                       Junior Data Scientist
+    ## 321          Engineer, Analytics & Data Science
+    ## 322 CI-Statistical Analyst/Business Analyst-CMB
+    ## 95                          DA-Data Analyst-CMB
+    ## 244                              Data Scientist
+    ##                                                Company R SAS SPSS Python MAtlab
+    ## 1                                                 <NA> 1   1    0      1      1
+    ## 320                                  Dialog Axiata PLC 1   0    0      1      0
+    ## 321                 London Stock Exchange Group plc3.1 0   0    0      1      0
+    ## 322                               E.D. Bullard Company 1   1    1      0      0
+    ## 95                                E.D. Bullard Company 0   1    1      0      0
+    ## 244 Emirates Center for Strategic Studies and Research 1   0    0      1      0
+    ##     Scala C. MS_Word Ms_Excel OLE_DB Ms_Access Ms_PowerPoint Spreadsheets
+    ## 1       0  0       0        0      0         0             0            0
+    ## 320     0  0       0        0      0         0             0            0
+    ## 321     0  0       0        0      0         0             0            0
+    ## 322     0  0       0        0      0         0             0            0
+    ## 95      0  0       1        1      0         1             1            0
+    ## 244     0  0       0        0      0         0             0            0
+    ##     Data_visualization Presentation_Skills Communication BigData Data_warehouse
+    ## 1                    0                   0             0       0              0
+    ## 320                  1                   0             0       1              1
+    ## 321                  1                   0             0       1              0
+    ## 322                  0                   0             0       0              0
+    ## 95                   0                   0             0       0              0
+    ## 244                  0                   0             0       0              0
+    ##     cloud_storage Google_Cloud AWS Machine_Learning Deep_Learning
+    ## 1               0            0   0                0             0
+    ## 320             1            0   0                1             0
+    ## 321             0            0   0                1             0
+    ## 322             0            0   0                0             0
+    ## 95              0            0   0                0             0
+    ## 244             0            0   0                1             0
+    ##     Computer_vision Java C.. C Linux_Unix SQL NoSQL RDBMS Oracle MySQL PHP
+    ## 1                 0    0   0 0          0   1     0     0      0     0   0
+    ## 320               0    0   0 0          0   0     0     0      0     0   0
+    ## 321               0    0   0 0          0   0     0     0      0     0   0
+    ## 322               0    0   0 0          0   1     0     0      0     0   0
+    ## 95                0    0   0 0          0   1     0     0      1     1   0
+    ## 244               0    1   1 1          0   1     0     0      0     0   0
+    ##     Flash_Actionscript SPL web_design_and_development_tools Wordpress AI
+    ## 1                    0   0                                0         0  0
+    ## 320                  0   0                                0         0  0
+    ## 321                  0   0                                0         0  0
+    ## 322                  0   0                                0         0  0
+    ## 95                   0   0                                0         0  0
+    ## 244                  0   0                                0         0  0
+    ##     Natural_Language_Processing.NLP. Microsoft_Power_BI Google_Analytics
+    ## 1                                  0                  0                0
+    ## 320                                0                  0                0
+    ## 321                                1                  1                0
+    ## 322                                0                  0                0
+    ## 95                                 0                  0                0
+    ## 244                                0                  0                0
+    ##     graphics_and_design_skills Data_marketing SEO Content_Management Tableau D3
+    ## 1                            0              0   0                  0       0  0
+    ## 320                          0              0   0                  0       0  0
+    ## 321                          0              0   0                  0       0  0
+    ## 322                          0              0   0                  0       0  0
+    ## 95                           0              0   0                  0       0  0
+    ## 244                          0              0   0                  0       0  0
+    ##     Alteryx KNIME Spotfire Spark S3 Redshift DigitalOcean Javascript Kafka
+    ## 1         0     0        0     0  0        0            0          0     0
+    ## 320       0     0        0     0  0        0            0          0     0
+    ## 321       0     0        0     0  0        0            0          0     0
+    ## 322       0     0        0     0  0        0            0          0     0
+    ## 95        0     0        0     0  0        0            0          0     0
+    ## 244       0     0        0     1  1        1            1          1     0
+    ##     Storm Bash Hadoop Data_Pipelines MPP_Platforms Qlik Pig Hive Tensorflow
+    ## 1       0    0      0              0             0    0   0    0          0
+    ## 320     0    0      0              0             0    0   0    0          0
+    ## 321     0    0      0              0             0    0   0    0          0
+    ## 322     0    0      0              0             0    0   0    0          0
+    ## 95      0    0      0              0             0    0   0    0          0
+    ## 244     0    0      0              0             0    0   0    0          0
+    ##     Map_Reduce Impala Solr Teradata MongoDB Elasticsearch YOLO agile_execution
+    ## 1            0      0    0        0       0             0    0               0
+    ## 320          0      0    0        0       0             0    0               0
+    ## 321          0      0    0        0       0             0    0               0
+    ## 322          0      0    0        0       0             0    0               0
+    ## 95           0      0    0        0       0             0    0               0
+    ## 244          0      0    0        0       0             0    0               0
+    ##     Data_management pyspark Data_mining Data_science Web_Analytic_tools IOT
+    ## 1                 0       0           0            0                  0   0
+    ## 320               0       0           0            0                  0   0
+    ## 321               0       0           0            0                  0   0
+    ## 322               0       0           0            0                  0   0
+    ## 95                0       0           0            0                  0   0
+    ## 244               0       0           1            0                  0   0
+    ##     Numerical_Analysis Economic Finance_Knowledge Investment_Knowledge
+    ## 1                    0        0                 0                    0
+    ## 320                  0        0                 0                    0
+    ## 321                  0        0                 0                    0
+    ## 322                  0        0                 0                    0
+    ## 95                   0        0                 0                    0
+    ## 244                  0        0                 0                    0
+    ##     Problem_Solving Korean_language Bash_Linux_Scripting
+    ## 1                 0               0                    0
+    ## 320               0               0                    0
+    ## 321               0               0                    0
+    ## 322               0               0                    0
+    ## 95                0               0                    0
+    ## 244               0               0                    0
+    ##                        Knowledge_in Experience         City Location
+    ## 1                              <NA>         4+         <NA>       NY
+    ## 320                            <NA>        2-3      Colombo       LK
+    ## 321 Elasticsearch, Logstash, Kibana        1-2      Colombo       LK
+    ## 322                            <NA>         2+      Colombo       LK
+    ## 95                             <NA>       <NA>      Colombo       LK
+    ## 244                            <NA>        5-7 Kuala Lumpur Malaysia
+    ##                                                                                               Educational_qualifications
+    ## 1                                                                                                                   <NA>
+    ## 320 Degree in Engineering / IT or specialized in Computer Science / Statistics from a recognized university or institute
+    ## 321                                                               Degree in Statistics / Mathematics / Computer Science.
+    ## 322                                                       Undergraduate degree in statistics, mathematics or engineering
+    ## 95   Bachelor's in Information Management, Information Technology, Computing, Mathematics, Statistics, or related fields
+    ## 244                    Master<U+0092>s or PHD in Statistics, Mathematics, Computer Science or another quantitative field
+    ##     Salary Team_Handling Debtor_reconcilation Payroll_management Bayesian
+    ## 1     <NA>             0                    0                  0        0
+    ## 320   <NA>             0                    0                  0        0
+    ## 321   <NA>             0                    0                  0        0
+    ## 322   <NA>             0                    0                  0        0
+    ## 95    <NA>             0                    0                  0        0
+    ## 244   <NA>             0                    0                  0        0
+    ##     Optimization Bahasa_Malaysia English_proficiency
+    ## 1              0               0                <NA>
+    ## 320            0               0                <NA>
+    ## 321            0               0                <NA>
+    ## 322            0               0                <NA>
+    ## 95             0               0                <NA>
+    ## 244            0               0                <NA>
+    ##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               URL
+    ## 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <NA>
+    ## 320 https://www.google.com/search?sxsrf=ALeKk00MUun1FouYtWJYm7L0o3wlM5pWbA:1596811359019&source=hp&ei=XmgtX9XyO-G_8QOttrSQAg&q=latest+jobs+for+data+scientist&oq=Latest+Jobs+for+data+scie&gs_lcp=CgZwc3ktYWIQAxgAMggIIRAWEB0QHjIICCEQFhAdEB4yCAghEBYQHRAeMggIIRAWEB0QHjIICCEQFhAdEB4yCAghEBYQHRAeMggIIRAWEB0QHjIICCEQFhAdEB4yCAghEBYQHRAeMggIIRAWEB0QHjoHCCMQ6gIQJzoECCMQJzoICAAQkQIQiwM6CAgAELEDEIMBOggILhCxAxCDAToFCAAQsQM6DggAELEDEIMBEJECEIsDOgsIABCxAxCDARCLAzoHCAAQAxCLAzoICC4QsQMQiwM6CAgAELEDEIsDOgUIABCLAzoCCAA6BggAEBYQHjoFCCEQoAFQ4RhY87gBYJ_IAWgCcAB4AIABwgOIAfQwkgEKMC4xNC43LjQuM5gBAKABAaoBB2d3cy13aXqwAQq4AQI&sclient=psy-ab&ibp=htl;jobs&sa=X&ved=2ahUKEwi7iIn-qYnrAhXS7XMBHR2PCx8Qp4wCMAB6BAgLEAE#fpstate=tldetail&htivrt=jobs&htiq=latest+jobs+for+data+scientist&htidocid=G184piKqa2o_fj-gAAAAAA%3D%3D&sxsrf=ALeKk00mvUvmmBGPtIAJqR8AKbUqgn_goA:1596811391427
+    ## 321                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          https://www.glassdoor.com/Job/sri-lanka-statistics-jobs-SRCH_IL.0,9_IN45_KO10,20.htm
+    ## 322                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          https://www.glassdoor.com/Job/sri-lanka-statistics-jobs-SRCH_IL.0,9_IN45_KO10,20.htm
+    ## 95                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           https://www.glassdoor.com/Job/sri-lanka-statistics-jobs-SRCH_IL.0,9_IN45_KO10,20.htm
+    ## 244                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         https://www.glassdoor.com/Job/jobs.htm?suggestCount=0&suggestChosen=false&clickSource=searchBtn&typedKeyword=&locT=N&locId=170&jobType=&context=Jobs&sc.keyword=statistics&dropdown=0
+    ##                         Search_Term                                  Job_Titles
+    ## 1                              <NA>                                        <NA>
+    ## 320 Data Analysis Jobs in Sri Lanka                       junior data scientist
+    ## 321 Data Analysis Jobs in Sri Lanka          engineer  analytics & data science
+    ## 322 Data Analysis Jobs in Sri Lanka ci statistical analyst business analyst cmb
+    ## 95  Data Analysis Jobs in Sri Lanka                         da data analyst cmb
+    ## 244 Statistics top jobs in Malaysia                              data scientist
+    ##     Job_Category Minimum_Years_of_experience Experience_Category   Job_Country
+    ## 1    Unimportant                          NA   Two or less years United States
+    ## 320 Data Science                           2   Two or less years     Sri Lanka
+    ## 321 Data Science                           1   Two or less years     Sri Lanka
+    ## 322 Data Analyst                           2   Two or less years     Sri Lanka
+    ## 95  Data Analyst                          NA   Two or less years     Sri Lanka
+    ## 244 Data Science                          NA   Two or less years      Malaysia
+    ##     Edu_Category
+    ## 1           <NA>
+    ## 320  Some Degree
+    ## 321  Some Degree
+    ## 322  Some Degree
+    ## 95       Min_Bsc
+    ## 244   Min_Master
 
 # Preview of the untidy dataset
 
@@ -206,15 +375,6 @@ Project under [Statistical Consulting
 Service](https://scs-fas-sjp.netlify.app/), University of Sri
 Jayewardenepura, Sri Lanka.
 
-### Our team and Contribution
-
 Data collection and Entry: BSc (Hons) Statistics, 2020 Undergraduates
 
-Hex sticker image design: 
-
-Column key documentation: 
-
-Data wrangling: 
-
-Data wrangling documentation: 
-
+Data wrangling: BSc (Hons) Statistics, 2020 Undergraduates
