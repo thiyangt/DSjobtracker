@@ -18,16 +18,23 @@ library(DSjobtracker)
 library(DSjobtracker)
 ```
 
+# Glimpse of tidy data
 
-# Preview of the tidy dataset
+```{r, comment=NA}
+tibble::glimpse(DStidy)
+```
 
-```{r}
+# Preview of the tidy version of the dataset
+
+```{r, comment=NA}
 head(DStidy)
 ```
 
-# Preview of the untidy dataset
 
-```{r}
+
+# Preview of the untidy version of the dataset
+
+```{r, comment=NA}
 
 head(DSraw)
 ```
@@ -38,6 +45,6 @@ Project under [Statistical Consulting Service](https://scs-fas-sjp.netlify.app/)
 
 Data collection and Entry: BSc (Hons) Statistics, 2020 Undergraduates
 
-Data wrangling:  BSc (Hons) Statistics, 2020 Undergraduates
+Data wrangling:  
 
 
