@@ -1,5 +1,5 @@
 
-# DSjobtracker
+# DSjobtracker <img src="hexstiker/figures/seer.png" align="right" height="200"/>
 
 What skills and qualifications are required for data science related
 jobs?
