@@ -12,7 +12,7 @@ Cities_Table <- read.csv(here("data-raw", "tidy_data_codes", "Shashini_tidydata_
 DSraw %>% filter(ID%in% c(263,300)) %>% select(ID,Consultant, Company, Job_title, URL)
 DSraw$ID <- 1:nrow(DSraw)
 
-head(DSraw)%>% view()
+head(DSraw)
 str(DSraw)
 
 
@@ -282,6 +282,11 @@ new_edu<-new_edu[with(new_edu,order(new_edu$ID)),]
 drop<-c("Adjusted_Education")
 DSraw<-new_edu[,!(names(new_edu) %in% drop)]
 DSraw[DSraw=="NA"]<-NA
+head(DSraw)
+dim(DSraw)
 
-
-write_csv(DSraw, "Wrangled_data_1.csv")
+DStidy <- DSraw
+head(DStidy)
+dim(DStidy)
+save(DStidy, file="data/DStidy.rda")
+#write_csv(DSraw, "Wrangled_data_1.csv")

@@ -12,6 +12,12 @@ devtools::install_github("thiyangt/DSjobtracker")
 library(DSjobtracker)
 ```
 
+# Preview of the tidy dataset
+
+```r
+head(DStidy)
+```
+
 # Preview of the untidy dataset
 
 ``` r
