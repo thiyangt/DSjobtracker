@@ -1,4 +1,4 @@
-devtools::install_github("thiyangt/DSjobtracker")
+#devtools::install_github("thiyangt/DSjobtracker")
 library(tidyverse)
 library(DSjobtracker)
 library(stringr)
