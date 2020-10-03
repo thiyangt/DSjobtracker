@@ -5,12 +5,13 @@ library(magrittr)
 library(stringr)
 library(dplyr)
 library(here)
+library(purrr)
 
 # Loading data ------------------------------------------------------------
 
 data("DSraw")
 Cities_Table <- read.csv(here("data-raw", "preprocessing", "worldcities.csv"), header = TRUE)
-US_state_codes <- read.csv(here("data-raw", "preprocessing", "US_state_codes.csv"),header = TRUE)
+US_state_codes <- read.csv(here("data-raw", "preprocessing", "US_state_codes.csv"), header = TRUE)
 
 # Fixing typos ------------------------------------------------------------
 
@@ -22,7 +23,7 @@ DSraw$ID <- 1:nrow(DSraw)
 # Replaces C# with C_Sharp and C++ with Cpp
 names(DSraw) <- names(DSraw) %>%
   str_replace_all("\\\\|\\s+|/", "_") %>%
-  str_replace_all(c("C#" = "C_Sharp","C\\+\\+" = "Cpp"),)
+  str_replace_all(c("C#" = "C_Sharp", "C\\+\\+" = "Cpp"), )
 
 
 # Treating NAs ------------------------------------------------------------
@@ -98,57 +99,72 @@ DA <- DA[!DA %in% DE]
 DS <- DS[!DS %>% is.na()]
 DE <- DE[!DE %>% is.na()]
 
-# TODO: Rewrite as a case_when
-DSraw <- DSraw %>% mutate(Job_Titles,
-  Job_Category = ifelse(Job_Titles %in% DS & Job_Titles %in% DE,
-    "Data Science and Data Engineering",
-    ifelse(Job_Titles %in% DS,
-      "Data Science",
-      ifelse(Job_Titles %in% DE,
-        "Data Engineering",
-        ifelse(Job_Titles %in% DA,
-          "Data Analyst",
-          "Unimportant"
-        )
-      )
-    )
-  )
-)
+DSraw <- DSraw %>%
+  mutate(Job_Category = case_when(
+    Job_Titles %in% DS & Job_Titles %in% DE ~ "Data Science and Data Engineering",
+    Job_Titles %in% DS ~ "Data Science",
+    Job_Titles %in% DE ~ "Data Analyst",
+    TRUE ~ "Unimportant"
+  ))
 
 
 # Tidying Experience ------------------------------------------------------
 
 # Experience
 DSraw %>%
-  select(Experience) %>%
-  unique()
+  count(Experience,sort = TRUE)
 
 # typo with or written as 0r
-# replace 18 months with 18/12
+# replace 18 months with 18/12 roughly 2 years
+# replace not needed and variants with 0 years
+DSraw$Experience_ <- DSraw$Experience %>%
+  str_replace_all(c(
+    "0r" = "or",
+    "18 months" = "2 years",
+    "not|Not" = "0 years"
+  ))
 
-str_extract_all(DSraw$Experience,"(\\d+)")
+DSraw <- DSraw %>%
+  mutate(
+    Minimum_Years_of_experience_ =
+      str_extract_all(DSraw$Experience_, "(\\d+)") %>%
+        map(~ ifelse(length(as.numeric(.x)) == 0,
+          as.numeric(NA), as.numeric(.x)
+        ) %>%
+          min()) %>%
+        unlist()
+  )
+
 DSraw <- DSraw %>%
   mutate(Minimum_Years_of_experience = str_extract(.$Experience, "(\\d+)")
   %>% as.numeric())
 DSraw$Minimum_Years_of_experience[DSraw$Experience > 30] <- NA
 DSraw %>%
   select(Minimum_Years_of_experience) %>%
-  unique()
-DSraw <- DSraw %>% mutate(
-  Experience_Category =
-    ifelse(Minimum_Years_of_experience <= 2 |
-      is.na(Minimum_Years_of_experience),
-    "Two or less years",
-    ifelse(Minimum_Years_of_experience <= 5,
-      "More than 2 and less than 5 years",
-      ifelse(Minimum_Years_of_experience <= 10,
-        "More than 5 and less than 10 years",
-        "More than 10 years"
-      )
-    )
-    )
-)
+  count(Minimum_Years_of_experience)
+DSraw %>%
+  select(Minimum_Years_of_experience_) %>%
+  count(Minimum_Years_of_experience_)
 
+# the improved version is better
+# the following code should be improved
+DSraw <- DSraw %>%
+  select(-Minimum_Years_of_experience) %>%
+  mutate(Minimum_Years_of_experience = Minimum_Years_of_experience_) %>%
+  select(-Minimum_Years_of_experience_) %>%
+  select(-Experience) %>%
+  mutate(Experience = Experience_) %>%
+  select(-Experience_)
+
+DSraw <- DSraw %>% mutate(
+  Experience_Category = case_when(
+    is.na(Minimum_Years_of_experience) ~ "Unknown or Not needed",
+    Minimum_Years_of_experience <= 2 ~ "Two or less years",
+    Minimum_Years_of_experience <= 5 ~ "More than 2 and less than 5 years",
+    Minimum_Years_of_experience <= 10 ~ "More than 5 and less than 10 years",
+    TRUE ~ "More than 10 years"
+  )
+)
 
 
 # Tidying Country ---------------------------------------------------------
