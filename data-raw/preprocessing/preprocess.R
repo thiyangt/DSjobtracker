@@ -112,7 +112,7 @@ DSraw <- DSraw %>%
 
 # Experience
 DSraw %>%
-  count(Experience,sort = TRUE)
+  count(Experience, sort = TRUE)
 
 # typo with or written as 0r
 # replace 18 months with 18/12 roughly 2 years
@@ -250,13 +250,13 @@ DSraw[DSraw == "Not mention" | DSraw == "not_mentioned" | DSraw == "not define"]
 
 # Tidying Education Qualifications ----------------------------------------
 
-DSraw$Educational_qualifications %>%
-  unique() %>%
-  View()
+DSraw %>%
+  count(Educational_qualifications, sort = TRUE)
 
 # Education Qualification
 Adjusted_Education <- DSraw$Educational_qualifications
 
+# TODO: This code can be optimized by a simple case_when with str_detect
 # Removing the symbols
 # Adjusted_Education <- str_replace_all("\\\\", " ")
 Adjusted_Education <- str_replace_all(Adjusted_Education, "\\\\x92", "")
@@ -298,7 +298,7 @@ length(other)
 
 
 # Now I am going to make a new grouping variable for Education
-edu <- data.frame(DSraw, Adjusted_Education)
+edu <- tibble(DSraw, Adjusted_Education)
 length(edu$Adjusted_Education)
 
 
@@ -334,13 +334,30 @@ drop <- c("Adjusted_Education")
 DSraw <- new_edu[, !(names(new_edu) %in% drop)]
 DSraw[DSraw == "NA"] <- NA
 
-View(DSraw)
-
 
 # Tidying Salary column ---------------------------------------------------
 
-
+# TODO: add currency of salary as well?
+DSraw <- DSraw %>% mutate(
+  Salary = str_replace_all(DSraw$Salary, c(
+    "\\xa" = "",
+    "k|K" = "000",
+    "," = ""
+  )),
+  Minimum_Salary = str_extract_all(DSraw$Salary, "\\d+(?:\\.)?\\d+") %>%
+    map(~ ifelse(length(as.numeric(.x)) == 0,
+      as.numeric(NA), min(as.numeric(.x))
+    )) %>%
+    unlist(),
+  Salary_Basis = case_when(
+    str_detect(DSraw$Salary, "year|annum|P\\.A\\.") ~ "yearly",
+    str_detect(DSraw$Salary, "hour") ~ "hourly",
+    str_detect(DSraw$Salary, "daily|day") ~ "daily",
+    TRUE ~ "unspecified"
+  )
+)
 
 # Exporting tidy dataset --------------------------------------------------
 
 DStidy <- DSraw
+save(DStidy, file = "data/DStidy.rda")
