@@ -4,6 +4,7 @@
 #' \describe{
 #' \item{ID}{row id}
 #' \item{Consultant}{Name of the consultant}
+#' }
 #' @source Collected and entered by BSc (Hons) Statistics undegraduates - 2020
 #'
 #' @examples

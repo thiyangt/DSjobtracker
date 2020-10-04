@@ -4,7 +4,13 @@
 \name{DSraw}
 \alias{DSraw}
 \title{Data Scientists/Data Analyst/ Statistician Job Tracker}
-\format{}
+\format{
+A data frame with 551 rows and 152 variables
+\describe{
+\item{ID}{row id}
+\item{Consultant}{Name of the consultant}
+}
+}
 \source{
 Collected and entered by BSc (Hons) Statistics undegraduates - 2020
 }
