@@ -6,7 +6,7 @@ library(dslabs)
 library(magrittr)
 
 data("DSraw")
-Cities_Table <- read.csv(here("data-raw", "tidy_data_codes", "Shashini_tidydata_codes", "worldcities.csv"), header = TRUE, sep = ",")
+Cities_Table <- read.csv(here::here("data-raw", "tidy_data_codes", "Shashini_tidydata_codes", "worldcities.csv"), header = TRUE, sep = ",")
 
 #Found 2 duplicate IDs with different entries
 DSraw %>% filter(ID%in% c(263,300)) %>% select(ID,Consultant, Company, Job_title, URL)
