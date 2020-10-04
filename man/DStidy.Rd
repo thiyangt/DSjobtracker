@@ -4,7 +4,9 @@
 \name{DStidy}
 \alias{DStidy}
 \title{Data Scientists/Data Analyst/ Statistician Job Tracker}
-\format{}
+\format{
+
+}
 \source{
 Data wrangling part was done by Chammika R. De Mel, Shashini D. Silva and Thimani D Ranathunga, BSc (Hons)Staistics, University of Sri
 Jayewardenepura.
