@@ -105,8 +105,8 @@
 #' \item{Payroll_management}{If the ability of Payroll management is required-1  ,If not mentioned-0}
 #' \item{Bayesian}{If Bayesian knowledge is required-1  ,If not mentioned-0}
 #' \item{Optimization}{If Optimization knowledge is required-1  ,If not mentioned-0}
-#' \item{Bahasa Malaysia}{If Bahasa Malaysia is required-1  ,If not mentioned-0 }
-#' \item{English proficiency}{If English proficiency is required-1  ,If not mentioned-0}
+#' \item{Bahasa_Malaysia}{If Bahasa Malaysia is required-1  ,If not mentioned-0 }
+#' \item{English_proficiency}{If English proficiency is required-1  ,If not mentioned-0}
 #' \item{URL}{Web address of a particular job advertisement}
 #' \item{Search_Term}{web search term of a particular job advertisement}
 #' \item{Job_Category}{Category of the job (i.e. "Data Science","Data Analyst" etc.)}
