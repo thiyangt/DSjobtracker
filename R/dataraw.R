@@ -4,7 +4,7 @@
 #' \describe{
 #' \item{ID}{row id}
 #' \item{Consultant}{Name of the consultant}
-#' \item{DataRetrieved}{ Date of Data Retrieved }
+#' \item{DateRetrieved}{ Date of Data Retrieved }
 #' \item{DatePublished}{Published Date of the Advertisement  }
 #' \item{Job_title}{ Name of the job category}
 #' \item{Company}{Name of the Company}
@@ -14,12 +14,12 @@
 #' \item{Python}{If Python is required -> 1 , If not mentioned -> 0}
 #' \item{MAtlab}{If Matlab is required -> 1 , If not mentioned -> 0}
 #' \item{Scala}{If Scala is required -> 1 , If not mentioned -> 0}
-#' \item{C_Sharp}{If C# is required -> 1 , If not mentioned -> 0}
-#' \item{MS_Word}{If knowledge in MS Word is required -> 1 , If not mentioned -> 0}
-#' \item{Ms_Excel}{If knowledge in MS Excel  is required -> 1 , If not mentioned -> 0}
-#' \item{OLE_DB}{If knowledge in OLE/DB is required -> 1 , If not mentioned -> 0}
-#' \item{Ms_Access}{If Ms Access is required -> 1 , If not mentioned -> 0}
-#' \item{Ms_PowerPoint}{If knowledge in Ms Powerpoint is required -> 1 , If not mentioned -> 0}
+#' \item{C#}{If C# is required -> 1 , If not mentioned -> 0}
+#' \item{MS Word}{If knowledge in MS Word is required -> 1 , If not mentioned -> 0}
+#' \item{Ms Excel}{If knowledge in MS Excel  is required -> 1 , If not mentioned -> 0}
+#' \item{OLE/DB}{If knowledge in OLE/DB is required -> 1 , If not mentioned -> 0}
+#' \item{Ms Access}{If Ms Access is required -> 1 , If not mentioned -> 0}
+#' \item{Ms PowerPoint}{If knowledge in Ms Powerpoint is required -> 1 , If not mentioned -> 0}
 #' \item{Spreadsheets}{If knowledge in Spreadsheets is required -> 1 , If not mentioned -> 0}
 #' \item{Data_visualization}{If  knowledge inData Visualization  is required -> 1 , If not mentioned -> 0}
 #' \item{Presentation_Skills}{If Presentation Skills are required -> 1 , If not mentioned -> 0}
@@ -30,12 +30,12 @@
 #' \item{Google_Cloud}{If knowledge in Google Cloud  is required -> 1 , If not mentioned -> 0}
 #' \item{AWS}{If knowledge in AWS  is required -> 1 , If not mentioned -> 0}
 #' \item{Machine_Learning}{If knowledge in Machine Learning is required -> 1 , If not mentioned -> 0}
-#' \item{Deep_Learning}{If knowledge in Deep Learning is required -> 1 , If not #' \itemmentioned -> 0}
-#' \item{Computer_vision}{If knowledge in Computer Vision is required -> 1 , If not #' \itemmentioned -> 0}
+#' \item{Deep Learning}{If knowledge in Deep Learning is required -> 1 , If not #' mentioned -> 0}
+#' \item{Computer_vision}{If knowledge in Computer Vision is required -> 1 , If not #' mentioned -> 0}
 #' \item{Java}{If Java is required -> 1 , If not mentioned -> 0}
-#' \item{Cpp}{If C++ is required -> 1 , If not mentioned -> 0}
+#' \item{C++}{If C++ is required -> 1 , If not mentioned -> 0}
 #' \item{C}{If C is required -> 1 , If not mentioned -> 0}
-#' \item{Linux_Unix}{If knowledge in Linux/Unix is required -> 1 , If not mentioned -> 0}
+#' \item{Linux/Unix}{If knowledge in Linux/Unix is required -> 1 , If not mentioned -> 0}
 #' \item{SQL}{If SQL is required -> 1 , If not mentioned -> 0}
 #' \item{NoSQL}{If NoSQL is required -> 1 , If not mentioned -> 0}
 #' \item{RDBMS}{If knowledge in RDBMS is required -> 1 , If not mentioned -> 0}
@@ -48,7 +48,7 @@
 #' \item{Wordpress}{If knowledge in Wordpress is required -> 1 , If not mentioned -> 0}
 #' \item{AI}{If Artificial Intelligence is required -> 1 , If not mentioned -> 0}
 #' \item{Natural_Language_Processing(NLP)}{If knowledge in NLP is required -> 1 , If not mentioned -> 0}
-#' \item{Microsoft_Power_BI}{If knowledge in Microsoft Power BI is required -> 1 , If not mentioned -> 0}
+#' \item{Microsoft Power BI}{If knowledge in Microsoft Power BI is required -> 1 , If not mentioned -> 0}
 #' \item{Google_Analytics}{If knowledge in Google Analytics  is required -> 1 , If not mentioned -> 0}
 #' \item{graphics_and_design_skills}{If Graphic and Design Skills are required -> 1 , If not mentioned -> 0}
 #' \item{Data_marketing}{If Data Marketing abillity is required -> 1 , If not mentioned -> 0}
@@ -74,7 +74,7 @@
 #' \item{Pig}{If Pig is required ->1,If not mentioned ->0}
 #' \item{Hive}{If Hive is required ->1,If not mentioned ->0}
 #' \item{Tensorflow}{If Tensorflow is required ->1,If not mentioned ->0}
-#' \item{Map_Reduce}{If Map/Reduce is required ->1,If not mentioned ->0}
+#' \item{Map/Reduce}{If Map/Reduce is required ->1,If not mentioned ->0}
 #' \item{Impala}{If Impala is required ->1,If not mentioned ->0}
 #' \item{Solr}{If Sloris required ->1,If not mentioned ->0}
 #' \item{Teradata}{If Teradata is required ->1,If not mentioned ->0}
@@ -82,10 +82,10 @@
 #' \item{Elasticsearch}{If Elasticsearch is required ->1,If not mentioned ->0}
 #' \item{YOLO}{If YOLO is required-1  ,If not mentioned-0}
 #' \item{agile execution}{If agile execution is required->1  ,If not mentioned->0}
-#' \item{Data_Management}{If the knowledge in data management is required->1  ,If not mentioned->0}
+#' \item{Data_management}{If the knowledge in data management is required->1  ,If not mentioned->0}
 #' \item{pyspark}{If pyspark is required->1  ,If not mentioned->0 }
 #' \item{Data_mining}{If the knowledge in data mining is required->1  ,If not mentioned->0}
-#' \item{Data_Science}{If the knowledge in data science is required->1  ,If not mentioned->0}
+#' \item{Data_science}{If the knowledge in data science is required->1  ,If not mentioned->0}
 #' \item{Web_Analytic_tools}{If the knowledge in Web Analytic tools is required->1  ,If not mentioned->0}
 #' \item{IOT}{If IOT is required->1  ,If not mentioned->0}
 #' \item{Numerical_Analysis}{If the knowledge in Numerical Analysis is required->1  ,If not mentioned->0}
@@ -94,7 +94,7 @@
 #' \item{Investment_Knowledge}{If Investment Knowledge is required->1  ,If not mentioned->0}
 #' \item{Problem_Solving}{If the ability of Problem Solving is required->1  ,If not mentioned->0}
 #' \item{Korean_language}{If the ability of speaking Korean language is required->1  ,If not mentioned->0}
-#' \item{Bash\ Linux_Scripting}{If Bash\ Linux Scripting is required->1  ,If not mentioned->0}
+#' \item{Bash\\Linux Scripting}{If Bash\ Linux Scripting is required->1  ,If not mentioned->0}
 #' \item{Knowledge_in}{Required knowledge to do a particular job ,If not mentioned->NA}
 #' \item{Experience}{Minimum experience required for a particular job}
 #' \item{City}{City where the company is located in }
@@ -102,7 +102,7 @@
 #' \item{Educational_qualifications}{Required educational qualifications}
 #' \item{Salary}{Amount of salary}
 #' \item{Team_Handling}{If the ability of Team Handling is required-1  ,If not mentioned-0}
-#' \item{Debtor_reconciliation}{If the ability of Debtor reconciliation is required-1  ,If not mentioned-0}
+#' \item{Debtor_reconcilation}{If the ability of Debtor reconciliation is required-1  ,If not mentioned-0}
 #' \item{Payroll_management}{If the ability of Payroll management is required-1  ,If not mentioned-0}
 #' \item{Bayesian}{If Bayesian knowledge is required-1  ,If not mentioned-0}
 #' \item{Optimization}{If Optimization knowledge is required-1  ,If not mentioned-0}
@@ -110,6 +110,50 @@
 #' \item{English proficiency}{If English proficiency is required-1  ,If not mentioned-0}
 #' \item{URL}{Web address of a particular job advertisement}
 #' \item{Search_Term}{web search term of a particular job advertisement}
+#' \item{X109}{Columns with null values}
+#' \item{X110}{Columns with null values}
+#' \item{X111}{Columns with null values}
+#' \item{X112}{Columns with null values}
+#' \item{X113}{Columns with null values}
+#' \item{X114}{Columns with null values}
+#' \item{X115}{Columns with null values}
+#' \item{X116}{Columns with null values}
+#' \item{X117}{Columns with null values}
+#' \item{X118}{Columns with null values}
+#' \item{X119}{Columns with null values}
+#' \item{X120}{Columns with null values}
+#' \item{X121}{Columns with null values}
+#' \item{X122}{Columns with null values}
+#' \item{X123}{Columns with null values}
+#' \item{X124}{Columns with null values}
+#' \item{X125}{Columns with null values}
+#' \item{X126}{Columns with null values}
+#' \item{X127}{Columns with null values}
+#' \item{X128}{Columns with null values}
+#' \item{X129}{Columns with null values}
+#' \item{X130}{Columns with null values}
+#' \item{X131}{Columns with null values}
+#' \item{X132}{Columns with null values}
+#' \item{X133}{Columns with null values}
+#' \item{X134}{Columns with null values}
+#' \item{X135}{Columns with null values}
+#' \item{X136}{Columns with null values}
+#' \item{X137}{Columns with null values}
+#' \item{X138}{Columns with null values}
+#' \item{X139}{Columns with null values}
+#' \item{X140}{Columns with null values}
+#' \item{X141}{Columns with null values}
+#' \item{X142}{Columns with null values}
+#' \item{X143}{Columns with null values}
+#' \item{X144}{Columns with null values}
+#' \item{X145}{Columns with null values}
+#' \item{X146}{Columns with null values}
+#' \item{X147}{Columns with null values}
+#' \item{X148}{Columns with null values}
+#' \item{X149}{Columns with null values}
+#' \item{X150}{Columns with null values}
+#' \item{X151}{Columns with null values}
+#' \item{X152}{Columns with null values}
 #' }
 #' @source Collected and entered by BSc (Hons) Statistics undegraduates - 2020
 #'

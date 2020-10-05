@@ -4,7 +4,7 @@
 #' \describe{
 #' \item{ID}{row id}
 #' \item{Consultant}{Name of the consultant}
-#' \item{DataRetrieved}{ Date of Data Retrieved }
+#' \item{DateRetrieved}{ Date of Data Retrieved }
 #' \item{DatePublished}{Published Date of the Advertisement  }
 #' \item{Job_title}{ Name of the job category}
 #' \item{Company}{Name of the Company}
@@ -30,8 +30,8 @@
 #' \item{Google_Cloud}{If knowledge in Google Cloud  is required -> 1 , If not mentioned -> 0}
 #' \item{AWS}{If knowledge in AWS  is required -> 1 , If not mentioned -> 0}
 #' \item{Machine_Learning}{If knowledge in Machine Learning is required -> 1 , If not mentioned -> 0}
-#' \item{Deep_Learning}{If knowledge in Deep Learning is required -> 1 , If not #' \itemmentioned -> 0}
-#' \item{Computer_vision}{If knowledge in Computer Vision is required -> 1 , If not #' \itemmentioned -> 0}
+#' \item{Deep_Learning}{If knowledge in Deep Learning is required -> 1 , If not entioned -> 0}
+#' \item{Computer_vision}{If knowledge in Computer Vision is required -> 1 , If not mentioned -> 0}
 #' \item{Java}{If Java is required -> 1 , If not mentioned -> 0}
 #' \item{Cpp}{If C++ is required -> 1 , If not mentioned -> 0}
 #' \item{C}{If C is required -> 1 , If not mentioned -> 0}
@@ -81,11 +81,11 @@
 #' \item{MongoDB}{If MonoDB is required ->1,If not mentioned ->0}
 #' \item{Elasticsearch}{If Elasticsearch is required ->1,If not mentioned ->0}
 #' \item{YOLO}{If YOLO is required-1  ,If not mentioned-0}
-#' \item{agile execution}{If agile execution is required->1  ,If not mentioned->0}
-#' \item{Data_Management}{If the knowledge in data management is required->1  ,If not mentioned->0}
+#' \item{agile_execution}{If agile execution is required->1  ,If not mentioned->0}
+#' \item{Data_management}{If the knowledge in data management is required->1  ,If not mentioned->0}
 #' \item{pyspark}{If pyspark is required->1  ,If not mentioned->0 }
 #' \item{Data_mining}{If the knowledge in data mining is required->1  ,If not mentioned->0}
-#' \item{Data_Science}{If the knowledge in data science is required->1  ,If not mentioned->0}
+#' \item{Data_science}{If the knowledge in data science is required->1  ,If not mentioned->0}
 #' \item{Web_Analytic_tools}{If the knowledge in Web Analytic tools is required->1  ,If not mentioned->0}
 #' \item{IOT}{If IOT is required->1  ,If not mentioned->0}
 #' \item{Numerical_Analysis}{If the knowledge in Numerical Analysis is required->1  ,If not mentioned->0}
@@ -101,7 +101,7 @@
 #' \item{Educational_qualifications}{Required educational qualifications}
 #' \item{Salary}{Amount of salary}
 #' \item{Team_Handling}{If the ability of Team Handling is required-1  ,If not mentioned-0}
-#' \item{Debtor_reconciliation}{If the ability of Debtor reconciliation is required-1  ,If not mentioned-0}
+#' \item{Debtor_reconcilation}{If the ability of Debtor reconciliation is required-1  ,If not mentioned-0}
 #' \item{Payroll_management}{If the ability of Payroll management is required-1  ,If not mentioned-0}
 #' \item{Bayesian}{If Bayesian knowledge is required-1  ,If not mentioned-0}
 #' \item{Optimization}{If Optimization knowledge is required-1  ,If not mentioned-0}
