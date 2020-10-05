@@ -35,8 +35,8 @@ A data frame with 551 rows and 152 variables
 \item{Google_Cloud}{If knowledge in Google Cloud  is required -> 1 , If not mentioned -> 0}
 \item{AWS}{If knowledge in AWS  is required -> 1 , If not mentioned -> 0}
 \item{Machine_Learning}{If knowledge in Machine Learning is required -> 1 , If not mentioned -> 0}
-\item{Deep_Learning}{If knowledge in Deep Learning is required -> 1 , If not #' \itemmentioned -> 0}
-\item{Computer_vision}{If knowledge in Computer Vision is required -> 1 , If not #' \itemmentioned -> 0}
+\item{Deep_Learning}{If knowledge in Deep Learning is required -> 1 , If not mentioned -> 0}
+\item{Computer_vision}{If knowledge in Computer Vision is required -> 1 , If not mentioned -> 0}
 \item{Java}{If Java is required -> 1 , If not mentioned -> 0}
 \item{Cpp}{If C++ is required -> 1 , If not mentioned -> 0}
 \item{C}{If C is required -> 1 , If not mentioned -> 0}

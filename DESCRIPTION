@@ -1,7 +1,7 @@
 Package: DSjobtracker
 Type: Package
 Title: What skills and qualifications are required for data science related jobs?
-Version: 0.1.0
+Version: 0.1.1
 Author: Thiyanga S. Talagala
 Maintainer: TThiyanga S Talagala <ttalagala@sjp.ac.lk>
 Description: More about what it does (maybe more than one line)
