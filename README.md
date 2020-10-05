@@ -369,4 +369,12 @@ Jayewardenepura, Sri Lanka.
 
 Data collection and Entry: BSc (Hons) Statistics, 2020 Undergraduates
 
-Data wrangling:
+Data wrangling: Chammika De Mel, Shashini, Thimani
+
+Data wrangling dashboard: Jayani Lakshika
+
+Hex Sticker image design: Piumika
+
+Column keys: 
+
+Package development contributor: Janith Wanniarachchie
