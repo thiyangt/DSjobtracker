@@ -1,6 +1,11 @@
 
 # DSjobtracker <img src="hexsticker/figures/hexsticker.png" align="right" height="200"/>
 
+[![Build
+Status](https://travis-ci.org/thiyangt/DSjobtracker.svg?branch=master)](https://travis-ci.org/thiyangt/DSjobtracker)
+
+
+
 What skills and qualifications are required for data science related
 jobs?
 
