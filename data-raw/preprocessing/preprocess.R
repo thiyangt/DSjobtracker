@@ -47,8 +47,11 @@ DSraw <- DSraw[, -c(109:152)]
 # TODO: see if replacing with mode is more effective
 DSraw[, c(7:93, 100:105)] <- DSraw %>%
   select(c(R:Bash_Linux_Scripting, Team_Handling:Bahasa_Malaysia)) %>%
-  replace(is.na(.), 0)
+  replace(is.na(.), 0) %>%
+  mutate_all(factor)
 
+# rearranging order of columns to have indicator variables together
+DSraw <- DSraw[,c(1:93,100:105,94:99,106:ncol(DSraw))]
 
 # Filter duplicates -------------------------------------------------------
 
@@ -133,12 +136,12 @@ DS <- DS[!DS %>% is.na()]
 DE <- DE[!DE %>% is.na()]
 
 DSraw <- DSraw %>%
-  mutate(Job_Category = case_when(
+  mutate(Job_Category = factor(case_when(
     Job_Titles %in% DS & Job_Titles %in% DE ~ "Data Science and Data Engineering",
     Job_Titles %in% DS ~ "Data Science",
     Job_Titles %in% DE ~ "Data Analyst",
     TRUE ~ "Unimportant"
-  ))
+  )))
 
 
 # Tidying Experience ------------------------------------------------------
@@ -190,13 +193,13 @@ DSraw <- DSraw %>%
   select(-Experience_)
 
 DSraw <- DSraw %>% mutate(
-  Experience_Category = case_when(
+  Experience_Category = factor(case_when(
     is.na(Minimum_Years_of_experience) ~ "Unknown or Not needed",
     Minimum_Years_of_experience <= 2 ~ "Two or less years",
     Minimum_Years_of_experience <= 5 ~ "More than 2 and less than 5 years",
     Minimum_Years_of_experience <= 10 ~ "More than 5 and less than 10 years",
     TRUE ~ "More than 10 years"
-  )
+  ))
 )
 
 
@@ -391,12 +394,12 @@ DSraw <- DSraw %>% mutate(
       as.numeric(NA), min(as.numeric(.x))
     )) %>%
     unlist(),
-  Salary_Basis = case_when(
+  Salary_Basis = factor(case_when(
     str_detect(DSraw$Salary, "year|annum|P\\.A\\.") ~ "yearly",
     str_detect(DSraw$Salary, "hour") ~ "hourly",
     str_detect(DSraw$Salary, "daily|day") ~ "daily",
     TRUE ~ "unspecified"
-  )
+  ))
 )
 
 # Exporting tidy dataset --------------------------------------------------
