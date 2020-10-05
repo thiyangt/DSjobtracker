@@ -1,6 +1,11 @@
 
 # DSjobtracker <img src="hexsticker/figures/hexsticker.png" align="right" height="200"/>
 
+[![Build
+Status](https://travis-ci.org/thiyangt/DSjobtracker.svg?branch=master)](https://travis-ci.org/thiyangt/DSjobtracker)
+
+
+
 What skills and qualifications are required for data science related
 jobs?
 
@@ -364,4 +369,12 @@ Jayewardenepura, Sri Lanka.
 
 Data collection and Entry: BSc (Hons) Statistics, 2020 Undergraduates
 
-Data wrangling:
+Data wrangling: Chammika De Mel, Shashini, Thimani
+
+Data wrangling dashboard: Jayani Lakshika
+
+Hex Sticker image design: Piumika
+
+Column keys: 
+
+Package development contributor: Janith Wanniarachchie
