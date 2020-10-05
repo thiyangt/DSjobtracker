@@ -55,6 +55,39 @@ DSraw[, c(7:93, 100:105)] <- DSraw %>%
 # Keep only the distinct Job titles URL and company
 DSraw <- DSraw %>% distinct(across(c(Job_title, URL, Company)), .keep_all = TRUE)
 
+# Fixing date columns -----------------------------------------------------
+
+date_regex_type_1 <- "(\\d{4}-\\d{2}-\\d{2})" # YYYY-MM-DD
+date_regex_type_2 <- "(\\d{1,2}\\/\\d{1,2}\\/\\d{2,4})" # DD/MM/YYYY
+date_regex_type_3 <- "(\\D+-\\d+)" # Month-YY
+
+dategets <- DSraw$DateRetrieved
+
+# replace NAs in Date Published column
+DSraw[is.na(DSraw$DatePublished), "DatePublished"] <- "Not_mentioned"
+# replace typo in Date Published
+DSraw[DSraw$DatePublished == "0308/2020", "DatePublished"] <- "03/08/2020"
+DSraw[DSraw$DatePublished == "0220-06-15", "DatePublished"] <- "2020-06-15"
+
+datepubs <- DSraw$DatePublished
+# ignore the warnings of XXX failed to parse as thats a side effect of case_when
+DSraw <- DSraw %>%
+  mutate(DatePublished = case_when(
+    str_detect(datepubs, date_regex_type_1) ~ lubridate::parse_date_time(
+      datepubs, orders = "%Y-%m-%d") %>% lubridate::as_date(),
+    str_detect(datepubs, date_regex_type_2) ~ lubridate::parse_date_time(
+      datepubs, orders = c("%d/%m/%Y", "%d/%m/%y")) %>% lubridate::as_date(),
+    str_detect(datepubs, date_regex_type_3) ~ lubridate::parse_date_time(
+      datepubs, orders = "%b-$y") %>% lubridate::as_date(),
+    TRUE ~ lubridate::as_date(NA),
+  ),
+  DateRetrieved = case_when(
+    str_detect(dategets, date_regex_type_1) ~ lubridate::parse_date_time(
+      dategets, orders = "%Y-%m-%d") %>% lubridate::as_date(),
+    str_detect(dategets, date_regex_type_2) ~ lubridate::parse_date_time(
+      dategets, orders = c("%d/%m/%Y", "%d/%m/%y")) %>% lubridate::as_date(),
+    TRUE ~ lubridate::as_date(NA)
+  ))
 
 # Tidying Job Title -------------------------------------------------------
 

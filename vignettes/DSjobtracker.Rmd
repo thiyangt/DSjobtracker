@@ -1,0 +1,26 @@
+---
+title: "DSjobtracker"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{DSjobtracker}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(DSjobtracker)
+```
+
+# Introduction
+
+The package contains two datasets
+
+1. DSraw : Raw dataset with `r nrow(DSraw)` rows and `r ncol(DSraw)` columns
+2. DStidy : Cleaned tidy dataset with `r nrow(DStidy)` rows and `r ncol(DStidy)` columns
