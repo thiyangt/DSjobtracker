@@ -36,12 +36,12 @@ DSraw %>%
 # Columns 109 to 152 have NAs for all observations,
 DSraw <- DSraw[, -c(109:152)]
 
-DSraw %>%
-  select(c(R:Bash_Linux_Scripting, Team_Handling:Bahasa_Malaysia)) %>%
-  as.matrix() %>%
-  apply(2, function(x) {
-    unique(x)
-  })
+# DSraw %>%
+#   select(c(R:Bash_Linux_Scripting, Team_Handling:Bahasa_Malaysia)) %>%
+#   as.matrix() %>%
+#   apply(2, function(x) {
+#     unique(x)
+#   })
 
 # Indicator variables have NA's and are replaced with 0
 # TODO: see if replacing with mode is more effective
@@ -216,6 +216,7 @@ DSraw$Location[DSraw$Location == "New zealand"] <- "New Zealand"
 DSraw$Location[DSraw$Location == "San Fransico"] <- "San Francisco"
 
 
+
 Job_loc <- function(x, y) {
   locs <- c()
   for (i in 1:length(x)) {
@@ -237,6 +238,7 @@ Job_loc <- function(x, y) {
   }
   return(locs)
 }
+
 
 Job_country <- Job_loc(DSraw$Location, Cities_Table)
 Job_country %>%
@@ -277,9 +279,16 @@ DSraw[is.na(Job_country), "Location"] %>% unique()
 DSraw <- DSraw %>% mutate(Job_Country = Job_country)
 
 
-DSraw[DSraw == "Not_define" | DSraw == "Not_mentioned" | DSraw == "NA" | DSraw == "not mention" | DSraw == "not mentioned"] <- NA
-DSraw[DSraw == "Not mention" | DSraw == "not_mentioned" | DSraw == "not define"] <- NA
-
+# DSraw[DSraw == "Not_define" | DSraw == "Not_mentioned" | DSraw == "NA" | DSraw == "not mention" | DSraw == "not mentioned"] <- NA
+# DSraw[DSraw == "Not mention" | DSraw == "not_mentioned" | DSraw == "not define"] <- NA
+DSraw <- DSraw %>% mutate_if(is.character,~ na_if(.x,"Not_define") %>%
+                      na_if("Not_mentioned") %>%
+                      na_if("NA") %>%
+                      na_if("not mention") %>%
+                      na_if("not mentioned") %>%
+                      na_if("Not mention") %>%
+                      na_if("not_mention") %>%
+                      na_if("not define"))
 
 # Tidying Education Qualifications ----------------------------------------
 
@@ -365,7 +374,7 @@ new_edu <- new_edu[with(new_edu, order(new_edu$ID)), ]
 
 drop <- c("Adjusted_Education")
 DSraw <- new_edu[, !(names(new_edu) %in% drop)]
-DSraw[DSraw == "NA"] <- NA
+DSraw <- DSraw %>% mutate_if(is.character,~ na_if(.x,"NA"))
 
 
 # Tidying Salary column ---------------------------------------------------

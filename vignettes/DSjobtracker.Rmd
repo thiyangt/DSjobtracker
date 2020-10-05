@@ -22,5 +22,7 @@ library(DSjobtracker)
 
 The package contains two datasets
 
-1. DSraw : Raw dataset with `r nrow(DSraw)` rows and `r ncol(DSraw)` columns
-2. DStidy : Cleaned tidy dataset with `r nrow(DStidy)` rows and `r ncol(DStidy)` columns
+1. ```DSraw``` : Raw dataset with `r nrow(DSraw)` rows and `r ncol(DSraw)` columns
+2. ```DStidy``` : Cleaned tidy dataset with `r nrow(DStidy)` rows and `r ncol(DStidy)` columns
+
+Both of these datasets contain information about job vacancies for 
