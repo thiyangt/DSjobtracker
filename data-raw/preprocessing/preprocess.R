@@ -36,25 +36,61 @@ DSraw %>%
 # Columns 109 to 152 have NAs for all observations,
 DSraw <- DSraw[, -c(109:152)]
 
-DSraw %>%
-  select(c(R:Bash_Linux_Scripting, Team_Handling:Bahasa_Malaysia)) %>%
-  as.matrix() %>%
-  apply(2, function(x) {
-    unique(x)
-  })
+# DSraw %>%
+#   select(c(R:Bash_Linux_Scripting, Team_Handling:Bahasa_Malaysia)) %>%
+#   as.matrix() %>%
+#   apply(2, function(x) {
+#     unique(x)
+#   })
 
 # Indicator variables have NA's and are replaced with 0
 # TODO: see if replacing with mode is more effective
 DSraw[, c(7:93, 100:105)] <- DSraw %>%
   select(c(R:Bash_Linux_Scripting, Team_Handling:Bahasa_Malaysia)) %>%
-  replace(is.na(.), 0)
+  replace(is.na(.), 0) %>%
+  mutate_all(factor)
 
+# rearranging order of columns to have indicator variables together
+DSraw <- DSraw[,c(1:93,100:105,94:99,106:ncol(DSraw))]
 
 # Filter duplicates -------------------------------------------------------
 
 # Keep only the distinct Job titles URL and company
 DSraw <- DSraw %>% distinct(across(c(Job_title, URL, Company)), .keep_all = TRUE)
 
+# Fixing date columns -----------------------------------------------------
+
+date_regex_type_1 <- "(\\d{4}-\\d{2}-\\d{2})" # YYYY-MM-DD
+date_regex_type_2 <- "(\\d{1,2}\\/\\d{1,2}\\/\\d{2,4})" # DD/MM/YYYY
+date_regex_type_3 <- "(\\D+-\\d+)" # Month-YY
+
+dategets <- DSraw$DateRetrieved
+
+# replace NAs in Date Published column
+DSraw[is.na(DSraw$DatePublished), "DatePublished"] <- "Not_mentioned"
+# replace typo in Date Published
+DSraw[DSraw$DatePublished == "0308/2020", "DatePublished"] <- "03/08/2020"
+DSraw[DSraw$DatePublished == "0220-06-15", "DatePublished"] <- "2020-06-15"
+
+datepubs <- DSraw$DatePublished
+# ignore the warnings of XXX failed to parse as thats a side effect of case_when
+DSraw <- DSraw %>%
+  mutate(DatePublished = case_when(
+    str_detect(datepubs, date_regex_type_1) ~ lubridate::parse_date_time(
+      datepubs, orders = "%Y-%m-%d") %>% lubridate::as_date(),
+    str_detect(datepubs, date_regex_type_2) ~ lubridate::parse_date_time(
+      datepubs, orders = c("%d/%m/%Y", "%d/%m/%y")) %>% lubridate::as_date(),
+    str_detect(datepubs, date_regex_type_3) ~ lubridate::parse_date_time(
+      datepubs, orders = "%b-$y") %>% lubridate::as_date(),
+    TRUE ~ lubridate::as_date(NA),
+  ),
+  DateRetrieved = case_when(
+    str_detect(dategets, date_regex_type_1) ~ lubridate::parse_date_time(
+      dategets, orders = "%Y-%m-%d") %>% lubridate::as_date(),
+    str_detect(dategets, date_regex_type_2) ~ lubridate::parse_date_time(
+      dategets, orders = c("%d/%m/%Y", "%d/%m/%y")) %>% lubridate::as_date(),
+    TRUE ~ lubridate::as_date(NA)
+  ))
 
 # Tidying Job Title -------------------------------------------------------
 
@@ -100,12 +136,12 @@ DS <- DS[!DS %>% is.na()]
 DE <- DE[!DE %>% is.na()]
 
 DSraw <- DSraw %>%
-  mutate(Job_Category = case_when(
+  mutate(Job_Category = factor(case_when(
     Job_Titles %in% DS & Job_Titles %in% DE ~ "Data Science and Data Engineering",
     Job_Titles %in% DS ~ "Data Science",
     Job_Titles %in% DE ~ "Data Analyst",
     TRUE ~ "Unimportant"
-  ))
+  )))
 
 
 # Tidying Experience ------------------------------------------------------
@@ -157,13 +193,13 @@ DSraw <- DSraw %>%
   select(-Experience_)
 
 DSraw <- DSraw %>% mutate(
-  Experience_Category = case_when(
+  Experience_Category = factor(case_when(
     is.na(Minimum_Years_of_experience) ~ "Unknown or Not needed",
     Minimum_Years_of_experience <= 2 ~ "Two or less years",
     Minimum_Years_of_experience <= 5 ~ "More than 2 and less than 5 years",
     Minimum_Years_of_experience <= 10 ~ "More than 5 and less than 10 years",
     TRUE ~ "More than 10 years"
-  )
+  ))
 )
 
 
@@ -181,6 +217,7 @@ DSraw$Location[DSraw$Location == "Singaore"] <- "Singapore"
 DSraw$Location[DSraw$Location == "Carfiff"] <- "Cardiff"
 DSraw$Location[DSraw$Location == "New zealand"] <- "New Zealand"
 DSraw$Location[DSraw$Location == "San Fransico"] <- "San Francisco"
+
 
 
 Job_loc <- function(x, y) {
@@ -204,6 +241,7 @@ Job_loc <- function(x, y) {
   }
   return(locs)
 }
+
 
 Job_country <- Job_loc(DSraw$Location, Cities_Table)
 Job_country %>%
@@ -244,9 +282,16 @@ DSraw[is.na(Job_country), "Location"] %>% unique()
 DSraw <- DSraw %>% mutate(Job_Country = Job_country)
 
 
-DSraw[DSraw == "Not_define" | DSraw == "Not_mentioned" | DSraw == "NA" | DSraw == "not mention" | DSraw == "not mentioned"] <- NA
-DSraw[DSraw == "Not mention" | DSraw == "not_mentioned" | DSraw == "not define"] <- NA
-
+# DSraw[DSraw == "Not_define" | DSraw == "Not_mentioned" | DSraw == "NA" | DSraw == "not mention" | DSraw == "not mentioned"] <- NA
+# DSraw[DSraw == "Not mention" | DSraw == "not_mentioned" | DSraw == "not define"] <- NA
+DSraw <- DSraw %>% mutate_if(is.character,~ na_if(.x,"Not_define") %>%
+                      na_if("Not_mentioned") %>%
+                      na_if("NA") %>%
+                      na_if("not mention") %>%
+                      na_if("not mentioned") %>%
+                      na_if("Not mention") %>%
+                      na_if("not_mention") %>%
+                      na_if("not define"))
 
 # Tidying Education Qualifications ----------------------------------------
 
@@ -332,7 +377,7 @@ new_edu <- new_edu[with(new_edu, order(new_edu$ID)), ]
 
 drop <- c("Adjusted_Education")
 DSraw <- new_edu[, !(names(new_edu) %in% drop)]
-DSraw[DSraw == "NA"] <- NA
+DSraw <- DSraw %>% mutate_if(is.character,~ na_if(.x,"NA"))
 
 
 # Tidying Salary column ---------------------------------------------------
@@ -349,12 +394,12 @@ DSraw <- DSraw %>% mutate(
       as.numeric(NA), min(as.numeric(.x))
     )) %>%
     unlist(),
-  Salary_Basis = case_when(
+  Salary_Basis = factor(case_when(
     str_detect(DSraw$Salary, "year|annum|P\\.A\\.") ~ "yearly",
     str_detect(DSraw$Salary, "hour") ~ "hourly",
     str_detect(DSraw$Salary, "daily|day") ~ "daily",
     TRUE ~ "unspecified"
-  )
+  ))
 )
 
 # Exporting tidy dataset --------------------------------------------------

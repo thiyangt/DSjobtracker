@@ -1,0 +1,87 @@
+---
+title: "DSjobtracker"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{DSjobtracker}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, echo=FALSE}
+library(DSjobtracker)
+data("DStidy")
+```
+
+# Introduction
+
+The package contains two datasets
+
+1. ```DSraw``` : Raw dataset with `r nrow(DSraw)` rows and `r ncol(DSraw)` columns
+2. ```DStidy``` : Cleaned tidy dataset with `r nrow(DStidy)` rows and `r ncol(DStidy)` columns
+
+Both of these datasets contain information about job vacancies related to data science, which were collected for the span of a month, by searching for specific ```Search_Term``` and then following the search results to gather data manually. 
+
+# Usage
+
+1. Install the library from github
+
+```{r,eval=FALSE}
+# install devtools if not already installed
+# install.packages("devtools")
+devtools::install_github("thiyangt/DSjobtracker")
+```
+
+2. Load the library 
+
+```{r,eval=FALSE}
+library(DSjobtracker)
+```
+
+3. Load the dataset into your environment
+
+```{r,eval=FALSE}
+data("DStidy")
+```
+
+# Overview of columns
+
+```{r}
+tibble::glimpse(DStidy)
+```
+
+More information on the meanings of the column names can be accessed through the help
+
+```{r}
+?DStidy
+```
+
+# Examples
+
+```{r}
+library(tidyr)
+library(magrittr)
+library(dplyr)
+library(ggplot2)
+theme_set(theme_minimal())
+DStidy %>%
+  select(c(R:Bahasa_Malaysia)) %>%
+  pivot_longer(c(R:Bahasa_Malaysia), values_to = "Value", names_to = "Name") %>%
+  mutate(Value = as.numeric(Value)) %>%
+  group_by(Name) %>%
+  summarize(Total = sum(Value)) %>% 
+  arrange(Total) %>% 
+  mutate(Name = factor(Name,levels = .$Name)) %>% 
+  top_n(20) %>% 
+  ggplot(aes(x = Name,y = Total)) +
+  geom_bar(stat = "identity") + 
+  coord_flip() +
+  labs(title = "Top ten required skills for data science jobs",
+       x = "Skill Required",y = "No of job vacancies")
+```
