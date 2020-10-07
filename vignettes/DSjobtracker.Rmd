@@ -23,7 +23,7 @@ library(DSjobtracker)
 data("DStidy")
 ```
 
-# Introduction
+# Getting started with DSjobtracker
 
 The package contains two datasets
 
@@ -68,7 +68,7 @@ More information on the meanings of the column names can be accessed through the
 
 # Examples
 
-```{r,warning=FALSE,message=FALSE}
+```{r,warning=FALSE,message=FALSE,dev='png'}
 library(tidyr)
 library(magrittr)
 library(dplyr)
