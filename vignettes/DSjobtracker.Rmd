@@ -77,7 +77,7 @@ theme_set(theme_minimal())
 DStidy %>%
   select(c(R:Bahasa_Malaysia)) %>%
   pivot_longer(c(R:Bahasa_Malaysia), values_to = "Value", names_to = "Name") %>%
-  mutate(Value = as.numeric(Value)) %>%
+  mutate(Value = as.numeric(levels(Value))[Value]) %>%
   group_by(Name) %>%
   summarize(Total = sum(Value)) %>% 
   arrange(Total) %>% 
@@ -85,9 +85,11 @@ DStidy %>%
   top_n(20) %>% 
   ggplot(aes(x = Name,y = Total)) +
   geom_bar(stat = "identity") + 
-  geom_label(aes(label = Total),nudge_y = 50) + 
+  geom_label(aes(label = Total),nudge_y = -10,size=3.25,
+             label.padding = unit(0.125,"lines")) + 
   coord_flip() +
-  labs(title = "Top ten required skills for data science jobs",
+  labs(title = "Top twenty skills required for data science jobs",
        x = "Skill Required",y = "No of job vacancies") 
-  
 ```
+
+

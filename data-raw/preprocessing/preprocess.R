@@ -25,6 +25,7 @@ names(DSraw) <- names(DSraw) %>%
   str_replace_all("\\\\|\\s+|/", "_") %>%
   str_replace_all(c("C#" = "C_Sharp", "C\\+\\+" = "Cpp"), )
 
+DSraw[DSraw$Linux_Unix == 10 & !is.na(DSraw$Linux_Unix),"Linux_Unix"] <- 1
 
 # Treating NAs ------------------------------------------------------------
 
