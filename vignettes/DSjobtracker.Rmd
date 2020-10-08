@@ -1,6 +1,10 @@
 ---
 title: "DSjobtracker"
-output: rmarkdown::html_vignette
+output: 
+  rmarkdown::html_vignette:
+    fig_width: 7
+    fig_height: 7
+
 vignette: >
   %\VignetteIndexEntry{DSjobtracker}
   %\VignetteEngine{knitr::rmarkdown}
@@ -19,7 +23,7 @@ library(DSjobtracker)
 data("DStidy")
 ```
 
-# Introduction
+# Getting started with DSjobtracker
 
 The package contains two datasets
 
@@ -64,7 +68,7 @@ More information on the meanings of the column names can be accessed through the
 
 # Examples
 
-```{r}
+```{r,warning=FALSE,message=FALSE,dev='png'}
 library(tidyr)
 library(magrittr)
 library(dplyr)
@@ -81,7 +85,9 @@ DStidy %>%
   top_n(20) %>% 
   ggplot(aes(x = Name,y = Total)) +
   geom_bar(stat = "identity") + 
+  geom_label(aes(label = Total),nudge_y = 50) + 
   coord_flip() +
   labs(title = "Top ten required skills for data science jobs",
-       x = "Skill Required",y = "No of job vacancies")
+       x = "Skill Required",y = "No of job vacancies") 
+  
 ```
