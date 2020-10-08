@@ -4,7 +4,10 @@ Title: What skills and qualifications are required for data science related jobs
 Version: 0.1.1
 Authors@R: c(
     person("Thiyanga", "Talagala", email = "ttalagala@sjp.ac.lk", role = c("aut", "cre")),
-    person("Janith", "Janith Wanniarachchi", role = c("aut")))
+    person("Janith", "Janith Wanniarachchi", role = c("aut")),
+     person("Chammika R", "Mel", role="ctb"),
+     person("Jayani ", "Lakshika", role="ctb"),
+     person("Shashini", "De Silva", role="ctb"))
 Maintainer: TThiyanga S Talagala <ttalagala@sjp.ac.lk>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
