@@ -25,6 +25,7 @@ names(DSraw) <- names(DSraw) %>%
   str_replace_all("\\\\|\\s+|/", "_") %>%
   str_replace_all(c("C#" = "C_Sharp", "C\\+\\+" = "Cpp"), )
 
+DSraw[DSraw$Linux_Unix == 10 & !is.na(DSraw$Linux_Unix), "Linux_Unix"] <- 1
 
 # Treating NAs ------------------------------------------------------------
 
@@ -51,7 +52,7 @@ DSraw[, c(7:93, 100:105)] <- DSraw %>%
   mutate_all(factor)
 
 # rearranging order of columns to have indicator variables together
-DSraw <- DSraw[,c(1:93,100:105,94:99,106:ncol(DSraw))]
+DSraw <- DSraw[, c(1:93, 100:105, 94:99, 106:ncol(DSraw))]
 
 # Filter duplicates -------------------------------------------------------
 
@@ -75,22 +76,34 @@ DSraw[DSraw$DatePublished == "0220-06-15", "DatePublished"] <- "2020-06-15"
 datepubs <- DSraw$DatePublished
 # ignore the warnings of XXX failed to parse as thats a side effect of case_when
 DSraw <- DSraw %>%
-  mutate(DatePublished = case_when(
-    str_detect(datepubs, date_regex_type_1) ~ lubridate::parse_date_time(
-      datepubs, orders = "%Y-%m-%d") %>% lubridate::as_date(),
-    str_detect(datepubs, date_regex_type_2) ~ lubridate::parse_date_time(
-      datepubs, orders = c("%d/%m/%Y", "%d/%m/%y")) %>% lubridate::as_date(),
-    str_detect(datepubs, date_regex_type_3) ~ lubridate::parse_date_time(
-      datepubs, orders = "%b-$y") %>% lubridate::as_date(),
-    TRUE ~ lubridate::as_date(NA),
-  ),
-  DateRetrieved = case_when(
-    str_detect(dategets, date_regex_type_1) ~ lubridate::parse_date_time(
-      dategets, orders = "%Y-%m-%d") %>% lubridate::as_date(),
-    str_detect(dategets, date_regex_type_2) ~ lubridate::parse_date_time(
-      dategets, orders = c("%d/%m/%Y", "%d/%m/%y")) %>% lubridate::as_date(),
-    TRUE ~ lubridate::as_date(NA)
-  ))
+  mutate(
+    DatePublished = case_when(
+      str_detect(datepubs, date_regex_type_1) ~ lubridate::parse_date_time(
+        datepubs,
+        orders = "%Y-%m-%d"
+      ) %>% lubridate::as_date(),
+      str_detect(datepubs, date_regex_type_2) ~ lubridate::parse_date_time(
+        datepubs,
+        orders = c("%d/%m/%Y", "%d/%m/%y")
+      ) %>% lubridate::as_date(),
+      str_detect(datepubs, date_regex_type_3) ~ lubridate::parse_date_time(
+        datepubs,
+        orders = "%b-$y"
+      ) %>% lubridate::as_date(),
+      TRUE ~ lubridate::as_date(NA),
+    ),
+    DateRetrieved = case_when(
+      str_detect(dategets, date_regex_type_1) ~ lubridate::parse_date_time(
+        dategets,
+        orders = "%Y-%m-%d"
+      ) %>% lubridate::as_date(),
+      str_detect(dategets, date_regex_type_2) ~ lubridate::parse_date_time(
+        dategets,
+        orders = c("%d/%m/%Y", "%d/%m/%y")
+      ) %>% lubridate::as_date(),
+      TRUE ~ lubridate::as_date(NA)
+    )
+  )
 
 # Tidying Job Title -------------------------------------------------------
 
@@ -199,6 +212,12 @@ DSraw <- DSraw %>% mutate(
     Minimum_Years_of_experience <= 5 ~ "More than 2 and less than 5 years",
     Minimum_Years_of_experience <= 10 ~ "More than 5 and less than 10 years",
     TRUE ~ "More than 10 years"
+  ), levels = c(
+    "Unknown or Not needed",
+    "Two or less years",
+    "More than 2 and less than 5 years",
+    "More than 5 and less than 10 years",
+    "More than 10 years"
   ))
 )
 
@@ -284,14 +303,14 @@ DSraw <- DSraw %>% mutate(Job_Country = Job_country)
 
 # DSraw[DSraw == "Not_define" | DSraw == "Not_mentioned" | DSraw == "NA" | DSraw == "not mention" | DSraw == "not mentioned"] <- NA
 # DSraw[DSraw == "Not mention" | DSraw == "not_mentioned" | DSraw == "not define"] <- NA
-DSraw <- DSraw %>% mutate_if(is.character,~ na_if(.x,"Not_define") %>%
-                      na_if("Not_mentioned") %>%
-                      na_if("NA") %>%
-                      na_if("not mention") %>%
-                      na_if("not mentioned") %>%
-                      na_if("Not mention") %>%
-                      na_if("not_mention") %>%
-                      na_if("not define"))
+DSraw <- DSraw %>% mutate_if(is.character, ~ na_if(.x, "Not_define") %>%
+  na_if("Not_mentioned") %>%
+  na_if("NA") %>%
+  na_if("not mention") %>%
+  na_if("not mentioned") %>%
+  na_if("Not mention") %>%
+  na_if("not_mention") %>%
+  na_if("not define"))
 
 # Tidying Education Qualifications ----------------------------------------
 
@@ -377,7 +396,14 @@ new_edu <- new_edu[with(new_edu, order(new_edu$ID)), ]
 
 drop <- c("Adjusted_Education")
 DSraw <- new_edu[, !(names(new_edu) %in% drop)]
-DSraw <- DSraw %>% mutate_if(is.character,~ na_if(.x,"NA"))
+DSraw <- DSraw %>%
+  mutate_if(is.character, ~ na_if(.x, "NA")) %>%
+  mutate(Edu_Category = factor(Edu_Category,
+    levels = c(
+      "Other", "Some Degree",
+      "Min_Bsc", "Min_Master", "Phd"
+    )
+  ))
 
 
 # Tidying Salary column ---------------------------------------------------

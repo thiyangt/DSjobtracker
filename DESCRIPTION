@@ -23,7 +23,10 @@ Suggests:
     ggplot2,
     dplyr,
     magrittr,
-    testthat
+    testthat,
+    wordcloud2,
+    forcats,
+    viridis
 VignetteBuilder: knitr
 Imports: 
     utils
