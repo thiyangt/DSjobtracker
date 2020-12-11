@@ -40,20 +40,5 @@ head(DStidy)
 head(DSraw)
 ```
 
-## About the project
-
-Project under [Statistical Consulting Service](https://scs-fas-sjp.netlify.app/), University of Sri Jayewardenepura, Sri Lanka.
-
-Data collection and Entry: BSc (Hons) Statistics, 2020 Undergraduates
-
-Data wrangling: Chammika De Mel, Shashini, Thimani
-
-Data wrangling dashboard: Jayani Lakshika
-
-Hex Sticker image design: Piumika
-
-Column keys: 
-
-Package development contributor: Janith Wanniarachchi
 
 

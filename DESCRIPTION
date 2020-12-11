@@ -4,15 +4,20 @@ Title: What skills and qualifications are required for data science related jobs
 Version: 0.1.1
 Authors@R: c(
     person("Thiyanga S.", "Talagala", email = "ttalagala@sjp.ac.lk", role = c("aut", "cre")),
-    person("Janith C.", "Wanniarachchi", role = c("aut")),
-     person("Chammika R", " De Mel", role="ctb"),
-     person("Jayani ", "Lakshika", role="ctb"),
-     person("Shashini", "De Silva", role="ctb"),
-     person("Thimani", "Dananjana", role="ctb"),
-      person("Hansani", "Piyumika", role="ctb"))
+    person("Janith C.", "Wanniarachchi", role = c("aut"),),
+     person("Chammika R", " De Mel", role="ctb",  comment="Data Collection, Data Wrangling"),
+     person("Jayani ", "Lakshika", role="ctb",  comment="Data Collection, Data Wrangling Dashboard"),
+     person("Shashini", "De Silva", role="ctb",  comment="Data Collection, Data Wrangling"),
+     person("Thimani", "Dananjana", role="ctb",  comment="Data Collection, Data Wrangling"),
+     person("Hansani", "Piyumika", role="ctb",  comment="Hexsticker design"),
+     person("R", "Wijesuriya", role="ctb", comment="Data Collection"), 
+     person("M", "Fernando", role="ctb", comment="Data Collection"),
+     person("N. N", "Madushani", role="ctb",  comment="Data Collection"),
+     person("S. N", "Madushani", role="ctb",  comment="Data Collection"),
+    person("V. P. C", "De Mel", role="ctb",  comment="Data Collection"),
+    person("O", "Ranathunga", role="ctb",  comment="Data Collection"))
 Maintainer: Thiyanga S Talagala <ttalagala@sjp.ac.lk>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: Dataset containing information about job listings for data science job roles.
 License: GPL-3 + file LICENSE
 Encoding: UTF-8
 LazyData: true

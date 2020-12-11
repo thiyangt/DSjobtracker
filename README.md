@@ -134,7 +134,7 @@ tibble::glimpse(DStidy)
     $ Experience                         <chr> "4+", "2-3", "1-2", "2+", "0 years…
     $ Experience_Category                <fct> More than 2 and less than 5 years,…
     $ Job_Country                        <chr> NA, "Sri Lanka", "Sri Lanka", "Sri…
-    $ Edu_Category                       <chr> NA, "Some Degree", "Some Degree", …
+    $ Edu_Category                       <fct> NA, Some Degree, Some Degree, Some…
     $ Minimum_Salary                     <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA…
     $ Salary_Basis                       <fct> unspecified, unspecified, unspecif…
 
@@ -226,21 +226,3 @@ head(DSraw)
     #   Team_Handling <dbl>, Debtor_reconcilation <dbl>, Payroll_management <dbl>,
     #   Bayesian <dbl>, Optimization <dbl>, `Bahasa Malaysia` <dbl>, `English
     #   proficiency` <chr>, URL <chr>, Search_Term <chr>, …
-
-## About the project
-
-Project under [Statistical Consulting
-Service](https://scs-fas-sjp.netlify.app/), University of Sri
-Jayewardenepura, Sri Lanka.
-
-Data collection and Entry: BSc (Hons) Statistics, 2020 Undergraduates
-
-Data wrangling: Chammika De Mel, Shashini, Thimani
-
-Data wrangling dashboard: Jayani Lakshika
-
-Hex Sticker image design: Piumika
-
-Column keys:
-
-Package development contributor: Janith Wanniarachchi
