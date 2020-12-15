@@ -1,4 +1,8 @@
 
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/DSjobtracker)](https://CRAN.R-project.org/package=DSjobtracker)
+[![Build
+Status](https://travis-ci.org/thiyangt/DSjobtracker.svg?branch=master)](https://travis-ci.org/thiyangt/DSjobtracker)
+
 # DSjobtracker
 
 <img src="man/figures/hexsticker.png" align="right" height="200"/>
@@ -7,6 +11,16 @@ What skills and qualifications are required for data science related
 jobs?
 
 # Installation
+
+The can install the **stable** version from
+[CRAN](https://cran.r-project.org/web/packages/DSjobtracker/index.html):
+
+``` r
+install.packages("DSjobtracker")
+```
+
+You can install the **development** version from
+[GitHub](https://github.com/thiyangt/DSjobtracker):
 
 ``` r
 #install.packages("devtools")
