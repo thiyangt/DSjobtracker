@@ -12,7 +12,7 @@ jobs?
 
 # Installation
 
-The can install the **stable** version from
+You can install the **stable** version from
 [CRAN](https://cran.r-project.org/web/packages/DSjobtracker/index.html):
 
 ``` r
