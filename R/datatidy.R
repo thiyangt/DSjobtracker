@@ -121,8 +121,36 @@
 #' @source Data wrangling part was done by Chammika R. De Mel, Shashini D. Silva and Thimani D Ranathunga, BSc (Hons)Staistics, University of Sri
 #' Jayewardenepura.
 #' @examples
-#' data(DStidy)
-#' head(DStidy)
-#' summary(DStidy)
-"DStidy"
+#' data(DStidy_2020)
+#' head(DStidy_2020)
+#' summary(DStidy_2020)
+"DStidy_2020"
 
+# TODO need to complete the following documentation
+#' @description Job advertisements collected in the year 2021
+#' @format A data frame with 382 rows and 112 columns
+#' \describe{
+#' \item{ID}{row id}
+#' \item{Consultant}{Name of the consultant}
+#' \item{DateRetrieved}{ Date of Data Retrieved }
+#' \item{DatePublished}{Published Date of the Advertisement  }
+#' }
+#' @source Data was sourced and wrangled by the BSc.Statistics Honors batch of 2016/2017
+#' @examples
+#' data(DStidy_2021)
+#' head(DStidy_2021)
+#' summary(DStidy_2021)
+"DStidy_2021"
+
+# TODO need to complete the following documentation
+#' @description Combined collection of Job advertisements collected by the Statstical Consulting Service of the University of Sri Jayewardenepura
+#' @format A data frame with 812 rows and 109 columns
+#' \item{ID}{row id}
+#' \item{Consultant}{Name of the consultant}
+#' \item{DateRetrieved}{ Date of Data Retrieved }
+#' \item{DatePublished}{Published Date of the Advertisement  }
+#' \item{Job_title}{ Name of the job category}
+#' \item{Company}{Name of the Company}
+#' \item{R}{If R is required -> 1 ,If not mentioned -> 0}
+#' @source Data collected and combined by the Statstical Consulting Service of University of Sri Jayewardenepura
+"DStidy"
