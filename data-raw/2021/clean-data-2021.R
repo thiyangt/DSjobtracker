@@ -140,6 +140,6 @@ preprocess_data <- function(data_raw){
 data_raw <- read_csv(here("data-raw","2021",
                           "DSjobtracker - Entry sheet Transposed.csv"),
                      na = c("NA","na"))
-data <- preprocess_data(data_raw)
-data %>% write_csv(here("data-raw","2021","DStidy_2021.csv"))
-data %>% save(here("data","DStidy_2021.rda"))
+DStidy_2021 <- preprocess_data(data_raw)
+DStidy_2021 %>% write_csv(here("data-raw","2021","DStidy_2021.csv"))
+save(DStidy_2021,file=here("data","DStidy_2021.rda"))
