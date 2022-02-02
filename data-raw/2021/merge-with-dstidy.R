@@ -86,10 +86,10 @@ new <- DStidy_2021 %>%
 
 DStidy <- prev %>%
   # select(-all_of(colnames(prev)[!colnames(prev) %in% colnames(new)])) %>%
-  mutate(version = "v1") %>%
+  mutate(year = 2020) %>%
   bind_rows(
     new %>% select(-all_of(colnames(new)[!colnames(new) %in% colnames(prev)])) %>%
-      mutate(version = "v2")
+      mutate(year = 2021)
   )
 
 DStidy %>% write_csv(here("data-raw","2021","DStidy_combined.csv"))
