@@ -11,10 +11,10 @@ get_data <- function(year){
     return(DStidy)
   }else if(as.numeric(year) == 2020){
     load(file=here("data","DStidy_2020.rda"))
-    return(DStidy_2021)
+    return(DStidy_2020)
   }else if(as.numeric(year) == 2021){
     load(file=here("data","DStidy_2021.rda"))
-    return(DStidy_2020)
+    return(DStidy_2021)
   }else{
     stop("Year variable of get_data function should be either 'all' or an year after 2020")
   }
