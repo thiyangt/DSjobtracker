@@ -11,3 +11,5 @@
 ^docs$
 ^pkgdown$
 ^LICENSE\.md$
+^doc$
+^Meta$
