@@ -7,14 +7,11 @@
 #' @export
 get_data <- function(year){
   if(year == "all"){
-    load(file=here("data","DStidy.rda"))
-    return(DStidy)
+    return(get(load(file="data/DStidy.rda")))
   }else if(as.numeric(year) == 2020){
-    load(file=here("data","DStidy_2020.rda"))
-    return(DStidy_2020)
+    return(get(load(file="data/DStidy_2020.rda")))
   }else if(as.numeric(year) == 2021){
-    load(file=here("data","DStidy_2021.rda"))
-    return(DStidy_2021)
+    return(get(load(file="data/DStidy_2021.rda")))
   }else{
     stop("Year variable of get_data function should be either 'all' or an year after 2020")
   }
