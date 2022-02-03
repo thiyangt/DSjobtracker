@@ -1,4 +1,4 @@
-#' Data Scientists/Data Analyst/ Statistician Job Tracker
+#' Data Scientists/Data Analyst/ Statistician Job Advertisements in the year 2020
 #' @description Job advertisements
 #' @format A data frame with 430 rows and 114 variables
 #' \describe{
@@ -127,13 +127,122 @@
 "DStidy_2020"
 
 # TODO need to complete the following documentation
+#' Data Scientists/Data Analyst/ Statistician Job Advertisements in the year 2021
 #' @description Job advertisements collected in the year 2021
 #' @format A data frame with 382 rows and 112 columns
 #' \describe{
 #' \item{ID}{row id}
 #' \item{Consultant}{Name of the consultant}
+#' \item{URL}{}
+#' \item{Search_Term}{}
 #' \item{DateRetrieved}{ Date of Data Retrieved }
-#' \item{DatePublished}{Published Date of the Advertisement  }
+#' \item{DatePublished}{Published Date of the Advertisement}
+#' \item{Job_Field}{}
+#' \item{Job_title}{}
+#' \item{Company}{}
+#' \item{Knowledge_in}{}
+#' \item{Minimum Experience in Years}{}
+#' \item{City}{}
+#' \item{Location}{}
+#' \item{Educational_qualifications}{}
+#' \item{Payment Frequency}{}
+#' \item{Currency}{}
+#' \item{Salary}{}
+#' \item{English Needed}{}
+#' \item{English proficiency description}{}
+#' \item{Additional_languages}{}
+#' \item{AI}{}
+#' \item{Natural_Language_Processing(NLP)}{}
+#' \item{Data_Pipelines}{}
+#' \item{Machine_Learning}{}
+#' \item{Deep Learning}{}
+#' \item{Computer_vision}{}
+#' \item{Data_visualization}{}
+#' \item{Data_warehouse}{}
+#' \item{BigData}{}
+#' \item{Data_management}{}
+#' \item{Data_mining}{}
+#' \item{Data_science}{}
+#' \item{Bayesian}{}
+#' \item{Optimization}{}
+#' \item{Numerical_Analysis}{}
+#' \item{IOT}{}
+#' \item{Data_translation}{}
+#' \item{R}{}
+#' \item{SAS}{}
+#' \item{SPSS}{}
+#' \item{Python}{}
+#' \item{MAtlab}{}
+#' \item{Scala}{}
+#' \item{C#}{}
+#' \item{Java}{}
+#' \item{C++}{}
+#' \item{C}{}
+#' \item{Bash}{}
+#' \item{Tensorflow}{}
+#' \item{pyspark}{}
+#' \item{YOLO}{}
+#' \item{MS Word}{}
+#' \item{Ms Excel}{}
+#' \item{Ms Access}{}
+#' \item{Ms PowerPoint}{}
+#' \item{Spreadsheets}{}
+#' \item{Google_Analytics}{}
+#' \item{Microsoft Power BI}{}
+#' \item{Tableau}{}
+#' \item{D3}{}
+#' \item{Qlik}{}
+#' \item{KNIME}{}
+#' \item{Spotfire}{}
+#' \item{Linux/Unix}{}
+#' \item{OLE/DB}{}
+#' \item{SQL}{}
+#' \item{NoSQL}{}
+#' \item{RDBMS}{}
+#' \item{Oracle}{}
+#' \item{MySQL}{}
+#' \item{MongoDB}{}
+#' \item{MPP_Platforms}{}
+#' \item{SPL}{}
+#' \item{Alteryx}{}
+#' \item{Spark}{}
+#' \item{Kafka}{}
+#' \item{Hadoop}{}
+#' \item{Pig}{}
+#' \item{Hive}{}
+#' \item{Map/Reduce}{}
+#' \item{Impala}{}
+#' \item{Storm}{}
+#' \item{Google_Cloud}{}
+#' \item{AWS}{}
+#' \item{cloud_storage}{}
+#' \item{S3}{}
+#' \item{Redshift}{}
+#' \item{DigitalOcean}{}
+#' \item{Teradata}{}
+#' \item{Solr}{}
+#' \item{Elasticsearch}{}
+#' \item{Presentation_Skills}{}
+#' \item{Communication}{}
+#' \item{Problem_Solving}{}
+#' \item{Team_Handling}{}
+#' \item{agile execution}{}
+#' \item{Data_marketing}{}
+#' \item{SEO}{}
+#' \item{graphics_and_design_skills}{}
+#' \item{Content_Management}{}
+#' \item{Economic}{}
+#' \item{Finance_Knowledge}{}
+#' \item{Investment_Knowledge}{}
+#' \item{Debtor_reconcilation}{}
+#' \item{Payroll_management}{}
+#' \item{web_design_and_development_tools}{}
+#' \item{PHP}{}
+#' \item{Javascript}{}
+#' \item{Web_Analytic_tools}{}
+#' \item{BSc_needed}{}
+#' \item{MSc_needed}{}
+#' \item{PhD_needed}{}
 #' }
 #' @source Data was sourced and wrangled by the BSc.Statistics Honors batch of 2016/2017
 #' @examples
@@ -143,8 +252,10 @@
 "DStidy_2021"
 
 # TODO need to complete the following documentation
+#' Data Scientists/Data Analyst/ Statistician Job Tracker
 #' @description Combined collection of Job advertisements collected by the Statstical Consulting Service of the University of Sri Jayewardenepura
 #' @format A data frame with 812 rows and 109 columns
+#' \describe{
 #' \item{ID}{row id}
 #' \item{Consultant}{Name of the consultant}
 #' \item{DateRetrieved}{ Date of Data Retrieved }
@@ -152,5 +263,108 @@
 #' \item{Job_title}{ Name of the job category}
 #' \item{Company}{Name of the Company}
 #' \item{R}{If R is required -> 1 ,If not mentioned -> 0}
+#' \item{SAS}{}
+#' \item{SPSS}{}
+#' \item{Python}{}
+#' \item{MAtlab}{}
+#' \item{Scala}{}
+#' \item{C#}{}
+#' \item{MS Word}{}
+#' \item{Ms Excel}{}
+#' \item{OLE/DB}{}
+#' \item{Ms Access}{}
+#' \item{Ms PowerPoint}{}
+#' \item{Spreadsheets}{}
+#' \item{Data_visualization}{}
+#' \item{Presentation_Skills}{}
+#' \item{Communication}{}
+#' \item{BigData}{}
+#' \item{Data_warehouse}{}
+#' \item{cloud_storage}{}
+#' \item{Google_Cloud}{}
+#' \item{AWS}{}
+#' \item{Machine_Learning}{}
+#' \item{Deep Learning}{}
+#' \item{Computer_vision}{}
+#' \item{Java}{}
+#' \item{C++}{}
+#' \item{C}{}
+#' \item{Linux/Unix}{}
+#' \item{SQL}{}
+#' \item{NoSQL}{}
+#' \item{RDBMS}{}
+#' \item{Oracle}{}
+#' \item{MySQL}{}
+#' \item{PHP}{}
+#' \item{SPL}{}
+#' \item{web_design_and_development_tools}{}
+#' \item{AI}{}
+#' \item{Natural_Language_Processing(NLP)}{}
+#' \item{Microsoft Power BI}{}
+#' \item{Google_Analytics}{}
+#' \item{graphics_and_design_skills}{}
+#' \item{Data_marketing}{}
+#' \item{SEO}{}
+#' \item{Content_Management}{}
+#' \item{Tableau}{}
+#' \item{D3}{}
+#' \item{Alteryx}{}
+#' \item{KNIME}{}
+#' \item{Spotfire}{}
+#' \item{Spark}{}
+#' \item{S3}{}
+#' \item{Redshift}{}
+#' \item{DigitalOcean}{}
+#' \item{Javascript}{}
+#' \item{Kafka}{}
+#' \item{Storm}{}
+#' \item{Bash}{}
+#' \item{Hadoop}{}
+#' \item{Data_Pipelines}{}
+#' \item{MPP_Platforms}{}
+#' \item{Qlik}{}
+#' \item{Pig}{}
+#' \item{Hive}{}
+#' \item{Tensorflow}{}
+#' \item{Map/Reduce}{}
+#' \item{Impala}{}
+#' \item{Solr}{}
+#' \item{Teradata}{}
+#' \item{MongoDB}{}
+#' \item{Elasticsearch}{}
+#' \item{YOLO}{}
+#' \item{agile execution}{}
+#' \item{Data_management}{}
+#' \item{pyspark}{}
+#' \item{Data_mining}{}
+#' \item{Data_science}{}
+#' \item{Web_Analytic_tools}{}
+#' \item{IOT}{}
+#' \item{Numerical_Analysis}{}
+#' \item{Economic}{}
+#' \item{Finance_Knowledge}{}
+#' \item{Investment_Knowledge}{}
+#' \item{Problem_Solving}{}
+#' \item{Team_Handling}{}
+#' \item{Debtor_reconcilation}{}
+#' \item{Payroll_management}{}
+#' \item{Bayesian}{}
+#' \item{Optimization}{}
+#' \item{Knowledge_in}{}
+#' \item{City}{}
+#' \item{Educational_qualifications}{}
+#' \item{Salary}{}
+#' \item{URL}{}
+#' \item{Search_Term}{}
+#' \item{Job_Category}{}
+#' \item{Experience_Category}{}
+#' \item{Location}{}
+#' \item{Payment Frequency}{}
+#' \item{BSc_needed}{}
+#' \item{MSc_needed}{}
+#' \item{PhD_needed}{}
+#' \item{English Needed}{}
+#' \item{year}{}
+#' }
 #' @source Data collected and combined by the Statstical Consulting Service of University of Sri Jayewardenepura
 "DStidy"
