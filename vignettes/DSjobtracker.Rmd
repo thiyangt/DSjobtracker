@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 
 ```{r setup, echo=FALSE}
 library(DSjobtracker)
-data("DStidy")
+data("DStidy_2020")
 ```
 
 # Getting started with DSjobtracker
@@ -53,19 +53,19 @@ library(DSjobtracker)
 3. Load the dataset into your environment
 
 ```{r,eval=FALSE}
-data("DStidy")
+data("DStidy_2020")
 ```
 
 # Overview of columns
 
 ```{r}
-tibble::glimpse(DStidy)
+tibble::glimpse(DStidy_2020)
 ```
 
 More information on the meanings of the column names can be accessed through the help
 
 ```{r,eval=FALSE}
-?DStidy
+?DStidy_2020
 ```
 
 # Examples
@@ -83,7 +83,7 @@ library(forcats)
 
 theme_set(theme_minimal())
 
-skills_long <- DStidy %>%
+skills_long <- DStidy_2020 %>%
   select(c(R:Bahasa_Malaysia)) %>%
   pivot_longer(c(R:Bahasa_Malaysia), values_to = "Value", names_to = "Name") %>%
   mutate(Value = as.numeric(levels(Value))[Value]) %>%
@@ -133,7 +133,7 @@ not_software_columns <- c(
 ```
 
 ```{r}
-indicators <- DStidy %>%
+indicators <- DStidy_2020 %>%
   select(c(R:Bahasa_Malaysia))
 software_indicators <- indicators %>%
   select(colnames(.)[!colnames(.) %in% not_software_columns])
@@ -160,7 +160,7 @@ fontFamily = "Montserrat"
 ## Required experience and the salary
 
 ```{r}
-count_data <- DStidy %>%
+count_data <- DStidy_2020 %>%
   select(Experience_Category, Edu_Category) %>%
   filter(!is.na(Edu_Category)) %>%
   count(Experience_Category, Edu_Category)
@@ -200,7 +200,7 @@ count_data %>%
 
 ```{r,fig.height=14}
 # radar plot with job category and skills in a radar
-job_skill_data <- DStidy %>% 
+job_skill_data <- DStidy_2020 %>% 
   select(R:Bahasa_Malaysia,Job_Category) %>% 
   filter(Job_Category != "Unimportant") %>% 
   pivot_longer(c(R:Bahasa_Malaysia),names_to="Name",values_to = "Value") %>%

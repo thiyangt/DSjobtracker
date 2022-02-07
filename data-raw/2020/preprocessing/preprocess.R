@@ -10,8 +10,8 @@ library(purrr)
 # Loading data ------------------------------------------------------------
 
 data("DSraw")
-Cities_Table <- read.csv(here("data-raw", "preprocessing", "worldcities.csv"), header = TRUE)
-US_state_codes <- read.csv(here("data-raw", "preprocessing", "US_state_codes.csv"), header = TRUE)
+Cities_Table <- read.csv(here("data-raw", "2020","preprocessing", "worldcities.csv"), header = TRUE)
+US_state_codes <- read.csv(here("data-raw", "2020","preprocessing", "US_state_codes.csv"), header = TRUE)
 
 # Fixing typos ------------------------------------------------------------
 
