@@ -151,6 +151,33 @@ clean_locations <- function(data_raw){
            country_code = countrycode::countryname(Country, destination = 'iso3c'))
 }
 
+fix_job_titles <- function(data_raw){
+  # TODO need to clean this code
+  Job_title_new <- str_to_lower(data_raw$Job_title)
+  Job_title_new <- str_trim(Job_title_new)
+  # Rename misspelled names
+
+  Job_title_new[Job_title_new == "data engineera"] <- "data engineers"
+  Job_title_new[Job_title_new %in% c("senior data enginner", "senior data engineeer")] <- "senior data engineers"
+  # Categorize jobs as data science, data analyst, data engineer
+
+  DS <- Job_title_new[grepl(c("data sci| machine| scientist"), Job_title_new)]
+  DE <- Job_title_new[grepl(c("data engineer | engin| intelligence"), Job_title_new)]
+  DA <- Job_title_new[grepl(c("analy|statist|actuarial| research"), Job_title_new)]
+
+  DA <- DA %>% append(Job_title_new[!(Job_title_new%in%c(DS,DE,DA))] %>% unique() %>% .[str_detect(.,"data\\s+")])
+  DS <- DS %>% append(Job_title_new[!(Job_title_new%in%c(DS,DE,DA))] %>% unique() %>% .[str_detect(.,"machine\\s+")])
+
+  DA <- DA[!DA%in%DS] #DA Job titles not include in the Ds
+  DA <- DA[!DA%in%DE] #DA Job titles not include in the DE
+  DS <-DS[!DS%>%is.na()]
+  DE <-DE[!DE%>%is.na()]
+  Others <- Job_title_new[!(Job_title_new%in%c(DS,DE,DA))] %>% unique()
+
+  data_raw %>% mutate(Job_Category = ifelse(Job_title_new%in%DS & Job_title_new%in%DE,
+                                                       "Data Science & Data Engineering", ifelse(Job_title_new%in%DS, "Data Science", ifelse(Job_title_new%in%DE, "Data Engineering", ifelse(Job_title_new%in%DA,"Data Analyst", "Others")))))
+}
+
 preprocess_data <- function(data_raw){
   data <- data_raw %>%
     drop_duplicates() %>%
