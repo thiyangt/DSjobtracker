@@ -123,6 +123,34 @@ fix_experience_typo <- function(data_raw){
       str_replace_all(`Minimum Experience in Years`, "[^0-9]","")))
 }
 
+clean_locations <- function(data_raw){
+  data_raw %>%
+    mutate(Country = case_when(Location == "Australia" ~ "Australia",
+                               Location %in% c("Canada", "canda", "canada") ~ "Canada",
+                               Location == "France" ~ "France",
+                               Location == "New Zealand" ~ "New Zealand",
+                               Location == "Spain" ~ "Spain",
+                               Location == "Sweden" ~ "Sweden",
+                               Location %in% c("Pennsylvania","110 Healthy Way, Folosm, CA",
+                                               "santa monica,CA","Anaheim, CA",
+                                               "Bloomington, IN","NewYork",
+                                               "USA") ~ "United States",
+                               Location %in% c("Bengaluru, Karnataka, India",
+                                               "Noida,Uttar Pradesh, India",
+                                               "India") ~ "India",
+                               Location == "Russia" ~ "Russia",
+                               Location %in% c("Sri Lnaka","Sri Lanka","SL") ~ "Sri Lanka",
+                               Location == "UAE" ~ "United Arab Emirates",
+                               Location == "China" ~ "China",
+                               Location == "Ireland" ~ "Ireland",
+                               Location == "Philippines" ~ "Philippines",
+                               Location == "Singapore" ~ "Singapore",
+                               Location %in% c("UK","Edinburgh,London,Manchester") ~ "United Kingdom",
+                               Location == "Melbone" ~ "Australia",
+                               TRUE ~ "Sri Lanka"),
+           country_code = countrycode::countryname(Country, destination = 'iso3c'))
+}
+
 preprocess_data <- function(data_raw){
   data <- data_raw %>%
     drop_duplicates() %>%
@@ -132,7 +160,8 @@ preprocess_data <- function(data_raw){
     merge_job_fields() %>%
     gen_edu_qual_feats() %>%
     make_common_salary() %>%
-    fix_experience_typo()
+    fix_experience_typo() %>%
+    clean_locations()
 
   return(data)
 }
