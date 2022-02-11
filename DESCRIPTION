@@ -1,7 +1,7 @@
 Package: DSjobtracker
 Type: Package
 Title: What Skills and Qualifications are Required for Data Science Related Jobs?
-Version: 0.1.1
+Version: 1.1.1
 Authors@R: c(
     person("Thiyanga S.", "Talagala", email = "ttalagala@sjp.ac.lk", role = c("aut", "cre")),
     person("Janith C.", "Wanniarachchi", role = c("aut"),),

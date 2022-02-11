@@ -37,6 +37,13 @@ library(DSjobtracker)
 tibble::glimpse(DStidy)
 ```
 
+# 2021 survey data
+
+```{r, comment=NA}
+df2021 <- get_data(2021)
+df2021
+```
+
 # Preview of the tidy version of the dataset
 
 ```{r, comment=NA}
