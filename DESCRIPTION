@@ -4,24 +4,13 @@ Title: What Skills and Qualifications are Required for Data Science Related Jobs
 Version: 1.1.1
 Authors@R: c(
     person("Thiyanga S.", "Talagala", email = "ttalagala@sjp.ac.lk", role = c("aut", "cre")),
-    person("Janith C.", "Wanniarachchi", role = c("aut"),),
-     person("Chammika R", " De Mel", role="ctb",  comment="Data Collection, Data Wrangling"),
-     person("Jayani ", "Lakshika", role="ctb",  comment="Data Collection, Data Wrangling Dashboard"),
-     person("Shashini", "De Silva", role="ctb",  comment="Data Collection, Data Wrangling"),
-     person("Thimani", "Dananjana", role="ctb",  comment="Data Collection, Data Wrangling"),
-     person("Hansani", "Piyumika", role="ctb",  comment="Hexsticker design"),
-     person("R", "Wijesuriya", role="ctb", comment="Data Collection"), 
-     person("M", "Fernando", role="ctb", comment="Data Collection"),
-     person("N. N", "Madushani", role="ctb",  comment="Data Collection"),
-     person("S. N", "Madushani", role="ctb",  comment="Data Collection"),
-    person("V. P. C", "De Mel", role="ctb",  comment="Data Collection"),
-    person("O", "Ranathunga", role="ctb",  comment="Data Collection"))
+    person("Janith C.", "Wanniarachchi", role = c("aut")))
 Maintainer: Thiyanga S. Talagala <ttalagala@sjp.ac.lk>
 Description: Dataset containing information about job listings for data science job roles.
 License: CC BY 4.0
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1
 Suggests: 
     knitr,
     rmarkdown,
