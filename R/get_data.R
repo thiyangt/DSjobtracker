@@ -12,6 +12,8 @@ get_data <- function(year){
     return(get(load(file="data/DStidy_2020.rda")))
   }else if(as.numeric(year) == 2021){
     return(get(load(file="data/DStidy_2021.rda")))
+  }else if(as.numeric(year) == 2022 | as.numeric(year) == 2023){
+    return(get(load(file="data/DStidy_2022_2023.rda")))
   }else{
     stop("Year variable of get_data function should be either 'all' or an year after 2020")
   }

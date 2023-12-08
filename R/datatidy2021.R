@@ -1,21 +1,21 @@
 #' Data Scientists/Data Analyst/ Statistician Job Advertisements in the year 2021
 #' @description Job advertisements collected in the year 2021
-#' @format A data frame with 382 rows and 112 columns
+#' @format A data frame with 382 rows and 115 columns
 #' \describe{
 #' \item{ID}{Row id}
 #' \item{Consultant}{Name of the consultant}
 #' \item{URL}{Web address of a particular job advertisement}
-#' \item{Search\_Term}{Web search term of a particular job advertisement}
+#' \item{Search_Term}{Web search term of a particular job advertisement}
 #' \item{DateRetrieved}{Date of data retrieved}
 #' \item{DatePublished}{Published date of the advertisement}
-#' \item{Job\_Field}{Name of the related job field}
-#' \item{Job\_title}{Name of the job category}
+#' \item{Job_Field}{Name of the related job field}
+#' \item{Job_title}{Name of the job category}
 #' \item{Company}{Name of the company}
-#' \item{Knowledge\_in}{Required knowledge to do a particular job , If not mentioned -> NA}
+#' \item{Knowledge_in}{Required knowledge to do a particular job , If not mentioned -> NA}
 #' \item{Minimum Experience in Years}{Minimum years of experience needed for the job , If not mentioned -> NA}
 #' \item{City}{City where the company is located in , If not mentioned -> NA}
 #' \item{Location}{Country where the company is located in}
-#' \item{Educational\_qualifications}{Required educational qualifications}
+#' \item{Educational_qualifications}{Required educational qualifications}
 #' \item{Payment Frequency}{Payment basis of salary(i.e. "hourly","daily","monthly","yearly", "NA")}
 #' \item{Currency}{Currency type of the salary}
 #' \item{Salary}{Amount of salary}
@@ -23,9 +23,9 @@
 #' \item{English proficiency description}{Required level of English proficiency , If not mentioned -> NA}
 #' \item{Additional_languages}{If other lanuages except English is required -> 1 , If not mentioned -> NA}
 #' \item{AI}{If Artificial Intelligence is required -> 1 , If not mentioned -> 0}
-#' \item{Natural\_Language\_Processing(NLP)}{If knowledge in NLP is required -> 1 , If not mentioned -> 0}
-#' \item{Data\_Pipelines}{If knowledge in Data Pipelines is required -> 1 , If not mentioned -> 0}
-#' \item{Machine\_Learning}{If knowledge in Machine Learning is required -> 1 , If not mentioned -> 0}
+#' \item{Natural_Language_Processing(NLP)}{If knowledge in NLP is required -> 1 , If not mentioned -> 0}
+#' \item{Data_Pipelines}{If knowledge in Data Pipelines is required -> 1 , If not mentioned -> 0}
+#' \item{Machine_Learning}{If knowledge in Machine Learning is required -> 1 , If not mentioned -> 0}
 #' \item{Deep Learning}{If knowledge in Deep Learning is required -> 1 , If not mentioned -> 0}
 #' \item{Computer_vision}{If knowledge in Computer Vision is required -> 1 , If not mentioned -> 0}
 #' \item{Data_visualization}{If  knowledge in Data Visualization  is required -> 1 , If not mentioned -> 0}
@@ -114,6 +114,9 @@
 #' \item{BSc_needed}{If a BSc Degree is required -> Yes , If not mentioned -> No/NA}
 #' \item{MSc_needed}{If a MSc Degree is required -> Yes , If not mentioned -> No/NA}
 #' \item{PhD_needed}{If a Phd Degree is required -> Yes , If not mentioned -> No/NA}
+#' \item{Country}{Country}
+#' \item{country_code}{country code}
+#' \item{Job_Category}{Job category}
 #' }
 #' @source Data wrangling part was done by Janith C. Wanniarachchie, BSc (Hons)Staistics, University of Sri
 #' Jayewardenepura and description file was prepared by Randi Shashikala.
