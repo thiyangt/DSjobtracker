@@ -1,7 +1,7 @@
 #' Data Scientists/Data Analyst/ Statistician Job Advertisements in the year 2021
 #' @description Job advertisements collected in the year 2021
 #' @format A data frame with 430 rows and 115 columns
-#' \describe{
+#' \itemize{
 #' \item{ID}{Row id}
 #' \item{Consultant}{Name of the consultant}
 #' \item{DateRetrieved}{Date of data retrieved}
@@ -117,6 +117,10 @@
 #' \item{Minimum_Salary}{Minimum salary}
 #' \item{Salary_Basis}{Salary basis}
 #' }
+#' @docType data
+#' @keywords datasets
+#' @name DStidy_2020
 #' @source Data wrangling part was done by Janith C. Wanniarachchie, BSc (Hons)Staistics, University of Sri
 #' Jayewardenepura and description file was prepared by Randi Shashikala.
 #' @usage data(DStidy_2020)
+NULL

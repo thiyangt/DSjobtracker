@@ -1,7 +1,7 @@
 #' Data Scientists/Data Analyst/ Statistician Job Advertisements in the year 2020
 #' @description Job advertisements
 #' @format A data frame with 1172 rows and 109 variables
-#' \describe{
+#' \itemize{
 #' \item{ID}{row id}
 #' \item{Consultant}{Name of the consultant}
 #' \item{DateRetrieved}{ Date of Data Retrieved }
@@ -118,12 +118,12 @@
 #' \item{MSc_needed}{If MSc is required-1  ,If not mentioned-0}
 #' \item{PhD_needed}{If PhD is required-1  ,If not mentioned-0}
 #' \item{English Needed}{If English is required-1  ,If not mentioned-0}
-#' \item{year}{Survey year}}
+#' \item{year}{Survey year}
+#' }
+#' @docType data
+#' @keywords datasets
+#' @name DStidy
 #' @source Data collection was done, BSc (Hons)Staistics, University of Sri
 #' Jayewardenepura under the statistical consultancy service from 2020 to 2023.
-#' @examples
-#' data(DStidy)
-#' head(DStidy)
-#' summary(DStidy)
 #' @usage data(DStidy)
-
+NULL
