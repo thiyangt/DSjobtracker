@@ -114,7 +114,7 @@
 #' \item{Experience_Category}{Number of years of experience in binned into categories}
 #' \item{Location}{Location}
 #' \item{Payment Frequency}{Payment frequency}
-#' \ite{BSc_needed}{If BSc is required-1  ,If not mentioned-0}
+#' \item{BSc_needed}{If BSc is required-1  ,If not mentioned-0}
 #' \item{MSc_needed}{If MSc is required-1  ,If not mentioned-0}
 #' \item{PhD_needed}{If PhD is required-1  ,If not mentioned-0}
 #' \item{English Needed}{If English is required-1  ,If not mentioned-0}
@@ -125,4 +125,5 @@
 #' data(DStidy)
 #' head(DStidy)
 #' summary(DStidy)
-"DStidy"
+#' @usage data(DStidy)
+

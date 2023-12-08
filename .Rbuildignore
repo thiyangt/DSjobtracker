@@ -13,3 +13,4 @@
 ^LICENSE\.md$
 ^doc$
 ^Meta$
+^.*\.log$

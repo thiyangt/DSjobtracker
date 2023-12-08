@@ -34,7 +34,7 @@
 #' \item{Java}{If Java is required -> 1 , If not mentioned -> 0}
 #' \item{Cpp}{If Cpp is required -> 1 , If not mentioned -> 0}
 #' \item{C}{If C is required -> 1 , If not mentioned -> 0}
-#' \item{Linux/Unix}{If knowledge in Linux/Unix is required -> 1 , If not mentioned -> 0}
+#' \item{Linux_Unix}{If knowledge in Linux/Unix is required -> 1 , If not mentioned -> 0}
 #' \item{SQL}{If SQL is required -> 1 , If not mentioned -> 0}
 #' \item{NoSQL}{If NoSQL is required -> 1 , If not mentioned -> 0}
 #' \item{RDBMS}{If knowledge in RDBMS is required -> 1 , If not mentioned -> 0}
@@ -78,6 +78,7 @@
 #' \item{Solr}{If Sloris required -> 1 , If not mentioned -> 0}
 #' \item{Teradata}{If Teradata is required -> 1 , If not mentioned -> 0}
 #' \item{MongoDB}{If MonoDB is required -> 1 , If not mentioned -> 0}
+#' \item{Elasticsearch}{If Elasticsearch is required -> 1, If not mentioned -> 0}
 #' \item{YOLO}{If YOLO is required -> 1, If not mentioned -> 0}
 #' \item{agile_execution}{If agile execution is required -> 1 , If not mentioned -> 0}
 #' \item{Data_management}{If the knowledge in Data Management is required -> 1 , If not mentioned -> 0}
@@ -103,17 +104,19 @@
 #' \item{City}{City where the company is located in , If not mentioned -> NA}
 #' \item{Location}{Country where the company is located in}
 #' \item{Educational_qualifications}{Required educational qualifications}
+#' \item{Salary}{Salary}
+#'  \item{English_proficiency}{English proficiency}
 #' \item{URL}{URL of the job advertisement}
 #' \item{Search_Term}{Search Term}
-#' \item{Job_category}{Name of the job category}
+#' \item{Job_Category}{Name of the job category}
 #' \item{Minimum_Years_of_experience}{Minimum years of experience needed for the job , If not mentioned -> NA}
 #' \item{Experience}{Experience}
 #' \item{Experience_Category}{Experience category}
-#' \item{Job_Category}{Job category}
+#' \item{Job_Country}{Job country}
 #' \item{Edu_Category}{Education category}
 #' \item{Minimum_Salary}{Minimum salary}
 #' \item{Salary_Basis}{Salary basis}
 #' }
 #' @source Data wrangling part was done by Janith C. Wanniarachchie, BSc (Hons)Staistics, University of Sri
 #' Jayewardenepura and description file was prepared by Randi Shashikala.
-"DStidy_2020"
+#' @usage data(DStidy_2020)
