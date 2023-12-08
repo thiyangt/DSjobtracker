@@ -3,7 +3,7 @@ Type: Package
 Title: What Skills and Qualifications are Required for Data Science Related Jobs?
 Version: 2.0.0
 Authors@R: c(
-    person("Thiyanga S.", "Talagala", email = "ttalagala@sjp.ac.lk", role = c("aut", "cre")),
+    person("Thiyanga S.", "Talagala", email = "ttalagala@sjp.ac.lk", role = c("aut", "cre"),  comment=c(ORCID = "0000-0002-0656-9789")),
     person("Janith C.", "Wanniarachchi", role = c("aut")),
     person("HLS", "Perera", role = c("ctb")),
     person("S", "Dissanayake", role = c("ctb")),
