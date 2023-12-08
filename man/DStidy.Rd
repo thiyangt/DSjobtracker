@@ -3,8 +3,16 @@
 \docType{data}
 \name{DStidy}
 \alias{DStidy}
-\title{Data Scientists/Data Analyst/ Statistician Job Advertisements in the year 2020}
-\format{
+\title{Data Scientists/Data Analyst/ Statistician Job Advertisements in the year 2020
+Job advertisements}
+\source{
+Data collection was done, BSc (Hons)Staistics, University of Sri
+Jayewardenepura under the statistical consultancy service from 2020 to 2023.
+}
+\usage{
+data(DStidy)
+}
+\description{
 A data frame with 1172 rows and 109 variables
 \itemize{
 \item{ID}{row id}
@@ -125,15 +133,5 @@ A data frame with 1172 rows and 109 variables
 \item{English Needed}{If English is required-1  ,If not mentioned-0}
 \item{year}{Survey year}
 }
-}
-\source{
-Data collection was done, BSc (Hons)Staistics, University of Sri
-Jayewardenepura under the statistical consultancy service from 2020 to 2023.
-}
-\usage{
-data(DStidy)
-}
-\description{
-Job advertisements
 }
 \keyword{datasets}

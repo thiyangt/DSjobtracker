@@ -1,6 +1,7 @@
 #' Data Scientists/Data Analyst/ Statistician Job Advertisements in the year 2020
-#' @description Job advertisements
-#' @format A data frame with 1172 rows and 109 variables
+#' Job advertisements
+#'
+#' A data frame with 1172 rows and 109 variables
 #' \itemize{
 #' \item{ID}{row id}
 #' \item{Consultant}{Name of the consultant}
