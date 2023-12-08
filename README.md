@@ -1,5 +1,5 @@
 
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/DSjobtracker)](https://CRAN.R-project.org/package=DSjobtracker)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/DSjobtracker)](https://CRAN.R-project.org/package=DSjobtracker)
 [![Build
 Status](https://travis-ci.org/thiyangt/DSjobtracker.svg?branch=master)](https://travis-ci.org/thiyangt/DSjobtracker)
 
@@ -34,7 +34,7 @@ library(DSjobtracker)
 tibble::glimpse(DStidy)
 ```
 
-    Rows: 812
+    Rows: 1,172
     Columns: 109
     $ ID                                 <dbl> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, …
     $ Consultant                         <chr> "Thiyanga", "Jayani", "Jayani", "Ja…
@@ -136,7 +136,7 @@ tibble::glimpse(DStidy)
     $ Salary                             <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA,…
     $ URL                                <chr> NA, "https://www.google.com/search?…
     $ Search_Term                        <chr> NA, "Data Analysis Jobs in Sri Lank…
-    $ Job_Category                       <fct> Unimportant, Data Science, Data Sci…
+    $ Job_Category                       <chr> "Unimportant", "Data Science", "Dat…
     $ Experience_Category                <chr> "More than 2 and less than 5 years"…
     $ Location                           <chr> NA, "Sri Lanka", "Sri Lanka", "Sri …
     $ `Payment Frequency`                <chr> "unspecified", "unspecified", "unsp…
@@ -153,7 +153,7 @@ df2021 <- get_data(2021)
 df2021
 ```
 
-    # A tibble: 382 × 112
+    # A tibble: 382 × 115
           ID Consultant URL        Search_Term DateRetrieved DatePublished Job_Field
        <dbl> <chr>      <chr>      <chr>       <chr>         <chr>         <chr>    
      1     1 Abhishanya https://w… statistics… 11/10/2021    11/10/2021    Informat…
@@ -166,13 +166,13 @@ df2021
      8     8 Abhishanya https://l… Data engin… 11/11/2021    11/9/2021     Other    
      9     9 Abhishanya https://w… Data engin… 11/11/2021    10/20/2021    Informat…
     10    10 Abhishanya https://w… Data engin… 11/11/2021    10/21/2021    Finance  
-    # … with 372 more rows, and 105 more variables: Job_title <chr>, Company <chr>,
-    #   Knowledge_in <chr>, `Minimum Experience in Years` <dbl>, City <chr>,
-    #   Location <chr>, Educational_qualifications <chr>,
-    #   `Payment Frequency` <chr>, Currency <chr>, Salary <dbl>,
-    #   `English Needed` <dbl>, `English proficiency description` <chr>,
-    #   Additional_languages <chr>, AI <dbl>,
-    #   `Natural_Language_Processing(NLP)` <dbl>, Data_Pipelines <dbl>, …
+    # ℹ 372 more rows
+    # ℹ 108 more variables: Job_title <chr>, Company <chr>, Knowledge_in <chr>,
+    #   `Minimum Experience in Years` <dbl>, City <chr>, Location <chr>,
+    #   Educational_qualifications <chr>, `Payment Frequency` <chr>,
+    #   Currency <chr>, Salary <dbl>, `English Needed` <dbl>,
+    #   `English proficiency description` <chr>, Additional_languages <chr>,
+    #   AI <dbl>, `Natural_Language_Processing(NLP)` <dbl>, Data_Pipelines <dbl>, …
 
 # Preview of the tidy version of the dataset
 
@@ -189,7 +189,7 @@ head(DStidy)
     4     4 Jayani     2020-08-07 00:00:00 2020-07-24 00:00:00 CI-Statistic… E.D. B…
     5     5 Jayani     2020-08-07 00:00:00 2020-07-24 00:00:00 DA-Data Anal… E.D. B…
     6     6 Jayani     2020-08-07 00:00:00 2020-08-13 00:00:00 Data Scienti… Emirat…
-    # … with 103 more variables: R <dbl>, SAS <dbl>, SPSS <dbl>, Python <dbl>,
+    # ℹ 103 more variables: R <dbl>, SAS <dbl>, SPSS <dbl>, Python <dbl>,
     #   MAtlab <dbl>, Scala <dbl>, `C#` <dbl>, `MS Word` <dbl>, `Ms Excel` <dbl>,
     #   `OLE/DB` <dbl>, `Ms Access` <dbl>, `Ms PowerPoint` <dbl>,
     #   Spreadsheets <dbl>, Data_visualization <dbl>, Presentation_Skills <dbl>,
@@ -212,8 +212,8 @@ head(DSraw)
     4     4 Jayani     07/08/2020    24/07/2020    CI-Statistic… E.D. B…     1     1
     5     5 Jayani     07/08/2020    24/07/2020    DA-Data Anal… E.D. B…     0     1
     6     6 Jayani     07/08/2020    13/08/2020    Data Scienti… Emirat…     1     0
-    # … with 144 more variables: SPSS <dbl>, Python <dbl>, MAtlab <dbl>,
-    #   Scala <dbl>, `C#` <dbl>, `MS Word` <dbl>, `Ms Excel` <dbl>, `OLE/DB` <dbl>,
+    # ℹ 144 more variables: SPSS <dbl>, Python <dbl>, MAtlab <dbl>, Scala <dbl>,
+    #   `C#` <dbl>, `MS Word` <dbl>, `Ms Excel` <dbl>, `OLE/DB` <dbl>,
     #   `Ms Access` <dbl>, `Ms PowerPoint` <dbl>, Spreadsheets <dbl>,
     #   Data_visualization <dbl>, Presentation_Skills <dbl>, Communication <dbl>,
     #   BigData <dbl>, Data_warehouse <dbl>, cloud_storage <dbl>,
