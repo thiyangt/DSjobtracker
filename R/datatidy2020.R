@@ -1,6 +1,7 @@
-#' Data Scientists/Data Analyst/ Statistician Job Advertisements in the year 2021
-#' Job advertisements collected in the year 2021
-#' A data frame with 430 rows and 115 columns
+#' Data scientists, data Analyst, and statistician related job advertisements in 2020
+#'
+#' A dataset with 430 rows and 115 columns
+#'
 #' \itemize{
 #' \item ID. Row id
 #' \item Consultant. Name of the consultant
@@ -14,11 +15,11 @@
 #' \item Python. If Python is required -> 1 , If not mentioned -> 0
 #' \item MAtlab. If MAtlab is required -> 1 , If not mentioned -> 0
 #' \item Scala. If Scala is required -> 1 , If not mentioned -> 0
-#' \item C_Sharp. If C\_Sharp is required -> 1 , If not mentioned -> 0
-#' \item Ms_Excel. If Ms\_Excel is required -> 1 , If not mentioned -> 0
+#' \item C_Sharp. If C_Sharp is required -> 1 , If not mentioned -> 0
+#' \item Ms_Excel. If Ms_Excel is required -> 1 , If not mentioned -> 0
 #' \item OLE_DB. If OLE_DB is required -> 1 , If not mentioned -> 0
-#' \item Ms_Access. If Ms\_Access is required -> 1 , If not mentioned -> 0
-#' \item Ms_PowerPoint. If Ms\_PowerPoint is required -> 1 , If not mentioned -> 0
+#' \item Ms_Access. If Ms_Access is required -> 1 , If not mentioned -> 0
+#' \item Ms_PowerPoint. If Ms_PowerPoint is required -> 1 , If not mentioned -> 0
 #' \item Spreadsheets. If Spreadsheets is required -> 1 , If not mentioned -> 0
 #' \item Data_visualization. If  knowledge in Data Visualization  is required -> 1 , If not mentioned -> 0
 #' \item Presentation_Skills. If Presentation Skills are required -> 1 , If not mentioned -> 0
@@ -41,7 +42,7 @@
 #' \item Oracle. If knowledge in Oracle is required -> 1 , If not mentioned -> 0
 #' \item MySQL. If MYSQL is required -> 1 , If not mentioned -> 0
 #' \item PHP. If PHP is required -> 1 , If not mentioned -> 0
-#' \item Flash_Actionscript. If Flash\_Actionscript is required -> 1 , If not mentioned -> 0
+#' \item Flash_Actionscript. If Flash_Actionscript is required -> 1 , If not mentioned -> 0
 #' \item SPL. If knowledge in SPL is required -> 1 , If not mentioned -> 0
 #' \item web_design_and_development_tools. If knowledge in Web Design and Development Tools is required -> 1 , If not mentioned -> 0
 #' \item Wordpress. If Wordpress is required -> 1 , If not mentioned -> 0
@@ -99,7 +100,7 @@
 #' \item Payroll_management. If the ability of Payroll management is required -> 1 , If not mentioned -> 0
 #' \item Bayesian. If Bayesian knowledge is required -> 1  , If not mentioned -> 0
 #' \item Optimization. If Optimization knowledge is required -> 1  ,If not mentioned -> 0
-#' \item Bahasa_Malaysia. If Bahasa\_Malaysia knowledge is required -> 1  ,If not mentioned -> 0
+#' \item Bahasa_Malaysia. If Bahasa_Malaysia knowledge is required -> 1  ,If not mentioned -> 0
 #' \item Knowledge_in. Required knowledge to do a particular job , If not mentioned -> NA
 #' \item City. City where the company is located in , If not mentioned -> NA
 #' \item Location. Country where the company is located in

@@ -3,8 +3,7 @@
 \docType{data}
 \name{DStidy}
 \alias{DStidy}
-\title{Data Scientists/Data Analyst/ Statistician Job Advertisements in the year 2020
-Job advertisements}
+\title{Data scientists, data analyst, and statistician job advertisements from 2020 to 2023}
 \source{
 Data collection was done, BSc (Hons)Staistics, University of Sri
 Jayewardenepura under the statistical consultancy service from 2020 to 2023.
@@ -13,125 +12,127 @@ Jayewardenepura under the statistical consultancy service from 2020 to 2023.
 data(DStidy)
 }
 \description{
-A data frame with 1172 rows and 109 variables
+A dataset with 1172 rows and 109 variables
+}
+\details{
 \itemize{
-\item{ID}{row id}
-\item{Consultant}{Name of the consultant}
-\item{DateRetrieved}{ Date of Data Retrieved }
-\item{DatePublished}{Published Date of the Advertisement  }
-\item{Job_title}{ Name of the job category}
-\item{Company}{Name of the Company}
-\item{R}{If R is required -> 1 ,If not mentioned -> 0}
-\item{SAS}{If SAS is required -> 1 , If not mentioned -> 0}
-\item{SPSS}{If SPSS is required -> 1 , If not mentioned -> 0}
-\item{Python}{If Python is required -> 1 , If not mentioned -> 0}
-\item{MAtlab}{If Matlab is required -> 1 , If not mentioned -> 0}
-\item{Scala}{If Scala is required -> 1 , If not mentioned -> 0}
-\item{C#}{If C# is required -> 1 , If not mentioned -> 0}
-\item{MS Word}{If knowledge in MS Word is required -> 1 , If not mentioned -> 0}
-\item{Ms Excel}{If knowledge in MS Excel  is required -> 1 , If not mentioned -> 0}
-\item{OLE/DB}{If knowledge in OLE/DB is required -> 1 , If not mentioned -> 0}
-\item{Ms Access}{If Ms Access is required -> 1 , If not mentioned -> 0}
-\item{Ms PowerPoint}{If knowledge in Ms Powerpoint is required -> 1 , If not mentioned -> 0}
-\item{Spreadsheets}{If knowledge in Spreadsheets is required -> 1 , If not mentioned -> 0}
-\item{Data_visualization}{If  knowledge inData Visualization  is required -> 1 , If not mentioned -> 0}
-\item{Presentation_Skills}{If Presentation Skills are required -> 1 , If not mentioned -> 0}
-\item{Communication}{If Communication skills are required -> 1 , If not mentioned -> 0}
-\item{BigData}{If knowledge in Big Data analysis  is required -> 1 , If not mentioned -> 0}
-\item{Data_warehouse}{If knowledge in Data Warehouse  is required -> 1 , If not mentioned -> 0}
-\item{cloud_storage}{If knowledge in Cloud Storage  is required -> 1 , If not mentioned -> 0}
-\item{Google_Cloud}{If knowledge in Google Cloud  is required -> 1 , If not mentioned -> 0}
-\item{AWS}{If knowledge in AWS  is required -> 1 , If not mentioned -> 0}
-\item{Machine_Learning}{If knowledge in Machine Learning is required -> 1 , If not mentioned -> 0}
-\item{Deep Learning}{If knowledge in Deep Learning is required -> 1 , If not entioned -> 0}
-\item{Computer_vision}{If knowledge in Computer Vision is required -> 1 , If not mentioned -> 0}
-\item{Java}{If Java is required -> 1 , If not mentioned -> 0}
-\item{C++}{If C++ is required -> 1 , If not mentioned -> 0}
-\item{C}{If C is required -> 1 , If not mentioned -> 0}
-\item{Linux/Unix}{If knowledge in Linux/Unix is required -> 1 , If not mentioned -> 0}
-\item{SQL}{If SQL is required -> 1 , If not mentioned -> 0}
-\item{NoSQL}{If NoSQL is required -> 1 , If not mentioned -> 0}
-\item{RDBMS}{If knowledge in RDBMS is required -> 1 , If not mentioned -> 0}
-\item{Oracle}{If knowledge in Oracle is required -> 1 , If not mentioned -> 0}
-\item{MySQL}{If MYSQL is required -> 1 , If not mentioned -> 0}
-\item{PHP}{If PHP is required -> 1 , If not mentioned -> 0}
-\item{Flash_Actionscript}{If knowledge in Flash Action Script is required -> 1 , If not mentioned -> 0}
-\item{SPL}{If knowledge in SPL is required -> 1 , If not mentioned -> 0}
-\item{web_design_and_development_tools}{If knowledge in Web Design and Development Tools is required -> 1 , If not mentioned -> 0}
-\item{Wordpress}{If knowledge in Wordpress is required -> 1 , If not mentioned -> 0}
-\item{AI}{If Artificial Intelligence is required -> 1 , If not mentioned -> 0}
-\item{Natural_Language_Processing(NLP)}{If knowledge in NLP is required -> 1 , If not mentioned -> 0}
-\item{Microsoft Power BI}{If knowledge in Microsoft Power BI is required -> 1 , If not mentioned -> 0}
-\item{Google_Analytics}{If knowledge in Google Analytics  is required -> 1 , If not mentioned -> 0}
-\item{graphics_and_design_skills}{If Graphic and Design Skills are required -> 1 , If not mentioned -> 0}
-\item{Data_marketing}{If Data Marketing abillity is required -> 1 , If not mentioned -> 0}
-\item{SEO}{If knowledge in SEO is required -> 1 , If not mentioned -> 0}
-\item{Content_Management}{If knowledge in Content Management is required -> 1 , If not mentioned -> 0}
-\item{Tableau}{If knowledge in Tableau is required -> 1 , If not mentioned -> 0}
-\item{D3}{If knowledge in D3 is required -> 1 , If not mentioned -> 0}
-\item{Alteryx}{If knowledge in Alteryx is required -> 1 , If not mentioned -> 0}
-\item{KNIME}{If knowledge in KNIME is required -> 1 , If not mentioned -> 0}
-\item{Spotfire}{If knowledge in Spotfire is required -> 1 , If not mentioned -> 0}
-\item{Spark}{If knowledge in Spark is required -> 1 , If not mentioned -> 0}
-\item{S3}{If knowledge in S3 is required -> 1 , If not mentioned -> 0}
-\item{Redshift}{If knowledge in Redshift is required -> 1 , If not mentioned -> 0}
-\item{DigitalOcean}{If knowledge in Digital Ocean is required -> 1 , If not mentioned -> 0}
-\item{Javascript}{If Java Script is required -> 1 , If not mentioned -> 0}
-\item{Kafka}{If knowledge in Kafka is required -> 1 , If not mentioned -> 0}
-\item{Storm}{If knowledge in Storm is required -> 1 , If not mentioned -> 0}
-\item{Bash}{If knowledge in Bash is required -> 1 , If not mentioned -> 0}
-\item{Hadoop}{If knowledge in Hadoop is required -> 1 , If not mentioned -> 0}
-\item{Data_Pipelines}{If knowledge in Data Pipelines is required -> 1 , If not mentioned -> 0}
-\item{MPP_Platforms}{If MPP Platforms is required ->1,If not mentioned-0}
-\item{Qlik}{If Qlik is required ->1,If not mentioned ->0}
-\item{Pig}{If Pig is required ->1,If not mentioned ->0}
-\item{Hive}{If Hive is required ->1,If not mentioned ->0}
-\item{Tensorflow}{If Tensorflow is required ->1,If not mentioned ->0}
-\item{Map/Reduce}{If Map/Reduce is required ->1,If not mentioned ->0}
-\item{Impala}{If Impala is required ->1,If not mentioned ->0}
-\item{Solr}{If Sloris required ->1,If not mentioned ->0}
-\item{Teradata}{If Teradata is required ->1,If not mentioned ->0}
-\item{MongoDB}{If MonoDB is required ->1,If not mentioned ->0}
-\item{Elasticsearch}{If Elasticsearch is required ->1,If not mentioned ->0}
-\item{YOLO}{If YOLO is required-1  ,If not mentioned-0}
-\item{agile execution}{If agile execution is required->1  ,If not mentioned->0}
-\item{Data_management}{If the knowledge in data management is required->1  ,If not mentioned->0}
-\item{pyspark}{If pyspark is required->1  ,If not mentioned->0 }
-\item{Data_mining}{If the knowledge in data mining is required->1  ,If not mentioned->0}
-\item{Data_science}{If the knowledge in data science is required->1  ,If not mentioned->0}
-\item{Web_Analytic_tools}{If the knowledge in Web Analytic tools is required->1  ,If not mentioned->0}
-\item{IOT}{If IOT is required->1  ,If not mentioned->0}
-\item{Numerical_Analysis}{If the knowledge in Numerical Analysis is required->1  ,If not mentioned->0}
-\item{Economic}{If the knowledge in Economic is required->1  ,If not mentioned->0}
-\item{Finance_Knowledge}{If Finance\_Knowledge  is required->1  ,If not mentioned->0}
-\item{Investment_Knowledge}{If Investment Knowledge is required->1  ,If not mentioned->0}
-\item{Problem_Solving}{If the ability of Problem Solving is required->1  ,If not mentioned->0}
-\item{Team_Handling}{If the ability of Team Handling is required->1  ,If not mentioned->0}
-\item{Debtor_reconcilation}{If the ability of Debtor reconcilation is required->1  ,If not mentioned->0}
-\item{Payroll_management}{If Payroll management is required->1  ,If not mentioned->0}
-\item{Bayesian}{If Bayesian is required->1  ,If not mentioned->0}
-\item{Optimization}{If Optimization knowledge is required-1  ,If not mentioned-0}
-\item{Knowledge_in}{Required knowledge to do a particular job ,If not mentioned->NA}
-\item{City}{City where the company is located in }
-\item{Educational_qualifications}{Required educational qualifications}
-\item{Salary}{Amount of salary}
-\item{URL}{Web address of a particular job advertisement}
-\item{Search_Term}{web search term of a particular job advertisement}
-\item{Job_Category}{Category of the job (i.e. "Data Science","Data Analyst" etc.)}
-\item{Team_Handling}{If the ability of Team Handling is required-1  ,If not mentioned-0}
-\item{Debtor_reconcilation}{If the ability of Debtor reconciliation is required-1  ,If not mentioned-0}
-\item{Payroll_management}{If the ability of Payroll management is required-1  ,If not mentioned-0}
-\item{Bayesian}{If Bayesian knowledge is required-1  ,If not mentioned-0}
-\item{Bahasa_Malaysia}{If Bahasa Malaysia is required-1  ,If not mentioned-0 }
-\item{English_proficiency}{If English proficiency is required-1  ,If not mentioned-0}
-\item{Experience_Category}{Number of years of experience in binned into categories}
-\item{Location}{Location}
-\item{Payment Frequency}{Payment frequency}
-\item{BSc_needed}{If BSc is required-1  ,If not mentioned-0}
-\item{MSc_needed}{If MSc is required-1  ,If not mentioned-0}
-\item{PhD_needed}{If PhD is required-1  ,If not mentioned-0}
-\item{English Needed}{If English is required-1  ,If not mentioned-0}
-\item{year}{Survey year}
+\item ID. row id
+\item Consultant. Name of the consultant
+\item DateRetrieved. Date of Data Retrieved
+\item DatePublished. Published Date of the Advertisement
+\item Job_title. Name of the job category
+\item Company. Name of the Company
+\item R. If R is required -> 1 ,If not mentioned -> 0
+\item SAS. If SAS is required -> 1 , If not mentioned -> 0
+\item SPSS. If SPSS is required -> 1 , If not mentioned -> 0
+\item Python. If Python is required -> 1 , If not mentioned -> 0
+\item MAtlab. If Matlab is required -> 1 , If not mentioned -> 0
+\item Scala. If Scala is required -> 1 , If not mentioned -> 0
+\item C#. If C# is required -> 1 , If not mentioned -> 0
+\item MS Word. If knowledge in MS Word is required -> 1 , If not mentioned -> 0
+\item Ms Excel. If knowledge in MS Excel  is required -> 1 , If not mentioned -> 0
+\item OLE/DB. If knowledge in OLE/DB is required -> 1 , If not mentioned -> 0
+\item Ms Access. If Ms Access is required -> 1 , If not mentioned -> 0
+\item Ms PowerPoint. If knowledge in Ms Powerpoint is required -> 1 , If not mentioned -> 0
+\item Spreadsheets. If knowledge in Spreadsheets is required -> 1 , If not mentioned -> 0
+\item Data_visualization. If  knowledge in Data Visualization  is required -> 1 , If not mentioned -> 0
+\item Presentation_Skills. If Presentation Skills are required -> 1 , If not mentioned -> 0
+\item Communication. If Communication skills are required -> 1 , If not mentioned -> 0
+\item BigData. If knowledge in Big Data analysis  is required -> 1 , If not mentioned -> 0
+\item Data_warehouse. If knowledge in Data Warehouse  is required -> 1 , If not mentioned -> 0
+\item cloud_storage. If knowledge in Cloud Storage  is required -> 1 , If not mentioned -> 0
+\item Google_Cloud. If knowledge in Google Cloud  is required -> 1 , If not mentioned -> 0
+\item AWS. If knowledge in AWS  is required -> 1 , If not mentioned -> 0
+\item Machine_Learning. If knowledge in Machine Learning is required -> 1 , If not mentioned -> 0
+\item Deep Learning. If knowledge in Deep Learning is required -> 1 , If not entioned -> 0
+\item Computer_vision. If knowledge in Computer Vision is required -> 1 , If not mentioned -> 0
+\item Java. If Java is required -> 1 , If not mentioned -> 0
+\item C++. If C++ is required -> 1 , If not mentioned -> 0
+\item C. If C is required -> 1 , If not mentioned -> 0
+\item Linux/Unix. If knowledge in Linux/Unix is required -> 1 , If not mentioned -> 0
+\item SQL. If SQL is required -> 1 , If not mentioned -> 0
+\item NoSQL. If NoSQL is required -> 1 , If not mentioned -> 0
+\item RDBMS. If knowledge in RDBMS is required -> 1 , If not mentioned -> 0
+\item Oracle. If knowledge in Oracle is required -> 1 , If not mentioned -> 0
+\item MySQL. If MYSQL is required -> 1 , If not mentioned -> 0
+\item PHP. If PHP is required -> 1 , If not mentioned -> 0
+\item Flash_Actionscript. If knowledge in Flash Action Script is required -> 1 , If not mentioned -> 0
+\item SPL. If knowledge in SPL is required -> 1 , If not mentioned -> 0
+\item web_design_and_development_tools. If knowledge in Web Design and Development Tools is required -> 1 , If not mentioned -> 0
+\item Wordpress. If knowledge in Wordpress is required -> 1 , If not mentioned -> 0
+\item AI. If Artificial Intelligence is required -> 1 , If not mentioned -> 0
+\item Natural_Language_Processing(NLP). If knowledge in NLP is required -> 1 , If not mentioned -> 0
+\item Microsoft Power BI. If knowledge in Microsoft Power BI is required -> 1 , If not mentioned -> 0
+\item Google_Analytics. If knowledge in Google Analytics  is required -> 1 , If not mentioned -> 0
+\item graphics_and_design_skills. If Graphic and Design Skills are required -> 1 , If not mentioned -> 0
+\item Data_marketing. If Data Marketing abillity is required -> 1 , If not mentioned -> 0
+\item SEO. If knowledge in SEO is required -> 1 , If not mentioned -> 0
+\item Content_Management. If knowledge in Content Management is required -> 1 , If not mentioned -> 0
+\item Tableau. If knowledge in Tableau is required -> 1 , If not mentioned -> 0
+\item D3. If knowledge in D3 is required -> 1 , If not mentioned -> 0
+\item Alteryx. If knowledge in Alteryx is required -> 1 , If not mentioned -> 0
+\item KNIME. If knowledge in KNIME is required -> 1 , If not mentioned -> 0
+\item Spotfire. If knowledge in Spotfire is required -> 1 , If not mentioned -> 0
+\item Spark. If knowledge in Spark is required -> 1 , If not mentioned -> 0
+\item S3. If knowledge in S3 is required -> 1 , If not mentioned -> 0
+\item Redshift. If knowledge in Redshift is required -> 1 , If not mentioned -> 0
+\item DigitalOcean. If knowledge in Digital Ocean is required -> 1 , If not mentioned -> 0
+\item Javascript. If Java Script is required -> 1 , If not mentioned -> 0
+\item Kafka. If knowledge in Kafka is required -> 1 , If not mentioned -> 0
+\item Storm. If knowledge in Storm is required -> 1 , If not mentioned -> 0
+\item Bash. If knowledge in Bash is required -> 1 , If not mentioned -> 0
+\item Hadoop. If knowledge in Hadoop is required -> 1 , If not mentioned -> 0
+\item Data_Pipelines. If knowledge in Data Pipelines is required -> 1 , If not mentioned -> 0
+\item MPP_Platforms. If MPP Platforms is required ->1,If not mentioned-0
+\item Qlik. If Qlik is required ->1,If not mentioned ->0
+\item Pig. If Pig is required ->1,If not mentioned ->0
+\item Hive. If Hive is required ->1,If not mentioned ->0
+\item Tensorflow. If Tensorflow is required ->1,If not mentioned ->0
+\item Map/Reduce. If Map/Reduce is required ->1,If not mentioned ->0
+\item Impala. If Impala is required ->1,If not mentioned ->0
+\item Solr. If Sloris required ->1,If not mentioned ->0
+\item Teradata. If Teradata is required ->1,If not mentioned ->0
+\item MongoDB. If MonoDB is required ->1,If not mentioned ->0
+\item Elasticsearch. If Elasticsearch is required ->1,If not mentioned ->0
+\item YOLO. If YOLO is required-1  ,If not mentioned-0
+\item agile execution. If agile execution is required->1  ,If not mentioned->0
+\item Data_management. If the knowledge in data management is required->1  ,If not mentioned->0
+\item pyspark. If pyspark is required->1  ,If not mentioned->0
+\item Data_mining. If the knowledge in data mining is required->1  ,If not mentioned->0
+\item Data_science. If the knowledge in data science is required->1  ,If not mentioned->0
+\item Web_Analytic_tools. If the knowledge in Web Analytic tools is required->1  ,If not mentioned->0
+\item IOT. If IOT is required->1  ,If not mentioned->0
+\item Numerical_Analysis. If the knowledge in Numerical Analysis is required->1  ,If not mentioned->0
+\item Economic. If the knowledge in Economic is required->1  ,If not mentioned->0
+\item Finance_Knowledge. If Finance_Knowledge  is required->1  ,If not mentioned->0
+\item Investment_Knowledge. If Investment Knowledge is required->1  ,If not mentioned->0
+\item Problem_Solving. If the ability of Problem Solving is required->1  ,If not mentioned->0
+\item Team_Handling. If the ability of Team Handling is required->1  ,If not mentioned->0
+\item Debtor_reconcilation. If the ability of Debtor reconcilation is required->1  ,If not mentioned->0
+\item Payroll_management. If Payroll management is required->1  ,If not mentioned->0
+\item Bayesian. If Bayesian is required->1  ,If not mentioned->0
+\item Optimization. If Optimization knowledge is required-1  ,If not mentioned-0
+\item Knowledge_in. Required knowledge to do a particular job ,If not mentioned->NA
+\item City. City where the company is located in
+\item Educational_qualifications. Required educational qualifications
+\item Salary. Amount of salary
+\item URL. Web address of a particular job advertisement
+\item Search_Term. web search term of a particular job advertisement
+\item Job_Category. Category of the job (i.e. "Data Science","Data Analyst" etc.)
+\item Team_Handling. If the ability of Team Handling is required-1  ,If not mentioned-0
+\item Debtor_reconcilation. If the ability of Debtor reconciliation is required-1  ,If not mentioned-0
+\item Payroll_management. If the ability of Payroll management is required-1  ,If not mentioned-0
+\item Bayesian. If Bayesian knowledge is required-1  ,If not mentioned-0
+\item Bahasa_Malaysia. If Bahasa Malaysia is required-1  ,If not mentioned-0
+\item English_proficiency. If English proficiency is required-1  ,If not mentioned-0
+\item Experience_Category. Number of years of experience in binned into categories
+\item Location. Location
+\item Payment Frequency. Payment frequency
+\item BSc_needed. If BSc is required-1  ,If not mentioned-0
+\item MSc_needed. If MSc is required-1  ,If not mentioned-0
+\item PhD_needed. If PhD is required-1  ,If not mentioned-0
+\item English Needed. If English is required-1  ,If not mentioned-0
+\item year. Survey year
 }
 }
 \keyword{datasets}
