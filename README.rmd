@@ -2,10 +2,6 @@
 output: github_document
 ---
 
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/DSjobtracker)](https://CRAN.R-project.org/package=DSjobtracker)
-[![Build
-Status](https://travis-ci.org/thiyangt/DSjobtracker.svg?branch=master)](https://travis-ci.org/thiyangt/DSjobtracker)
-
 # DSjobtracker 
 <img src="man/figures/hexsticker.png" align="right" height="200"/>
 
