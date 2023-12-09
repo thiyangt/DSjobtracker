@@ -16,6 +16,7 @@ Authors@R: c(
 Maintainer: Thiyanga S. Talagala <ttalagala@sjp.ac.lk>
 Description: Dataset containing information about job listings for data science job roles.
 License: CC BY 4.0
+URL: https://github.com/thiyangt/DSjobtracker
 Encoding: UTF-8
 LazyData: true
 LazyDataCompression: xz
