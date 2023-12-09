@@ -8,13 +8,6 @@ jobs?
 
 # Installation
 
-You can install the **stable** version from
-[CRAN](https://cran.r-project.org/web/packages/DSjobtracker/index.html):
-
-``` r
-install.packages("DSjobtracker")
-```
-
 You can install the **development** version from
 [GitHub](https://github.com/thiyangt/DSjobtracker):
 
