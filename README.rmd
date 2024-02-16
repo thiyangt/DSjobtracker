@@ -2,10 +2,41 @@
 output: github_document
 ---
 
+[![CRAN status](https://www.r-pkg.org/badges/version/DSjobtracker)](https://CRAN.R-project.org/package=DSjobtracker)
+
+
+
 # DSjobtracker 
 <img src="man/figures/hexsticker.png" align="right" height="200"/>
 
 What skills and qualifications are required for data science related jobs?
+
+
+
+DSjobtraker package compiles data from 1172 job ads in data science and statistics, making it an invaluable tool for learning key skills required in these areas. Here is a word cloud of 97 requested skills. 
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(ggwordcloud)
+library(DSjobtracker)
+
+word <- colnames(DStidy[, 7:94])
+word <- gsub("_", " ", word)
+frequency <- colSums(DStidy[, 7:94], na.rm=TRUE)
+df <- data.frame(word = word,
+                 freq = frequency)
+
+ggplot(data = df,
+       aes(label = word, size = freq, col = as.character(freq))) +
+  geom_text_wordcloud(rm_outside = TRUE, max_steps = 1,
+                      grid_size = 1, eccentricity = .9)+
+  scale_size_area(max_size = 20)+
+ # scale_color_brewer(palette = "Paired", direction = -1)+
+  theme_void()
+
+```
+
+
 
 # Installation
 
