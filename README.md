@@ -6,12 +6,13 @@ status](https://www.r-pkg.org/badges/version/DSjobtracker)](https://CRAN.R-proje
 
 <img src="man/figures/hexsticker.png" align="right" height="200"/>
 
-What skills and qualifications are required for data science related
-jobs?
+## What skills and qualifications are required for data science related jobs?
 
-DSjobtraker package compiles data from 1172 job ads in data science and
-statistics, making it an invaluable tool for learning key skills
-required in these areas. Here is a word cloud of 97 requested skills.
+The DSjobtraker package compiles data from 1172 job advertisements in
+data science and statistics, making it an invaluable tool for learning
+key skills required in these areas. Here is a word cloud of 97 requested
+skills mentioned in the job advertisements. It provides insights into
+the most sought-after skills in the field.
 
 ![](README_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
 
